@@ -168,7 +168,7 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="{{url('prueba')}}" class="brand-link">
+    <a href="{{url('perfiladmin')}}" class="brand-link">
       <span class="fa fa-paw"></span>
       <span class="brand-text font-weight-light">{{Session::get('usuario')}}</span>
     </a>
@@ -191,21 +191,11 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item has-treeview menu-open">
-            <a href="{{url('perfiladmin')}}" class="nav-link">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
+            <a href="{{url('perfil')}}" class="nav-link">
+              <i class="nav-icon fas fa-user"></i>
               <p>
                 Perfil
                 <!-- <i class="right fas fa-angle-left"></i> -->
-              </p>
-            </a>
-            
-          </li><br>
-          <li class="nav-item">
-            <a href="{{url('productos_servicios')}}" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
-              <p>
-                Productos y Servicios
-                <!-- <span class="right badge badge-danger">New</span> -->
               </p>
             </a>
           </li><br>
@@ -220,8 +210,27 @@
             </a>
           </li><br>
           <li class="nav-item has-treeview">
+            <a href="{{url('registro')}}" class="nav-link">
+              <i class="nav-icon fas fa-clipboard"></i>
+              <p>
+                Registro de ventas
+<!--                 <i class="fas fa-angle-left right"></i>
+                <span class="badge badge-info right">6</span> -->
+              </p>
+            </a>
+          </li><br>
+          <li class="nav-item">
+            <a href="{{url('productos_servicios')}}" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Productos y Servicios
+                <!-- <span class="right badge badge-danger">New</span> -->
+              </p>
+            </a>
+          </li><br>
+          <li class="nav-item has-treeview">
             <a href="{{url('empleados')}}" class="nav-link">
-              <i class="nav-icon fas fa-chart-pie"></i>
+              <i class="nav-icon fas fa-users"></i>
               <p>
                 Empleados
                 <!-- <i class="right fas fa-angle-left"></i> -->
@@ -232,7 +241,7 @@
 
           <li class="nav-item has-treeview">
             <a href="{{url('logout')}}" class="nav-link">
-              <i class="nav-icon fas fa-chart-pie"></i>
+              <i class="nav-icon fas fa-sign-out-alt"></i>
               <p>
                 Salir
                 <!-- <i class="right fas fa-angle-left"></i> -->

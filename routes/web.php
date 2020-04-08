@@ -17,10 +17,12 @@
 
 Route::get('/','DatosEmpresaController@index');
 //administrador
-Route::view('perfiladmin','administrador.perfil');
+// Route::view('perfiladmin','administrador.perfil');
+Route::view('perfil','administrador.perfil');
 Route::view('productos_servicios','administrador.articulos');
 Route::view('empleados','administrador.trabajadores');
 Route::view('empresa','administrador.empresa');
+Route::view('registro','administrador.registroventa');
 //vendedores
 Route::view('perfilvendedor','vendedores.perfil');
 Route::view('ventas','vendedores.ventas');
@@ -51,6 +53,7 @@ Route::apiResource('apiEmpleadoDesactivado','ApiEmpleadoDesactivado');
 Route::apiResource('apiEspecie','ApiEspecieController');
 Route::apiResource('apiEmpresa','ApiEmpresaController');
 Route::apiResource('apiArticulo','ApiArticuloController');
+Route::apiResource('apiArticuloDesactivado','ApiArticuloDesactivado');
 Route::apiResource('apiTipo','ApiTipoController');
 Route::apiResource('logo','ApiLogoController');
 Route::apiResource('apiMascota','ApiMascotaController');

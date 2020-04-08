@@ -15,6 +15,7 @@ class ApiDetalleVentaController extends Controller
     public function index()
     {
         //
+        return $detalle=Detalle_Venta::all();
     }
 
     /**

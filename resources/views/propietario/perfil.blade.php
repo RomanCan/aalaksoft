@@ -1,6 +1,6 @@
 @extends('layouts.masterpropietario')
 @section('contenido')
-<script>
+<!-- <script>
 function soloLetras(e) {
     key = e.keyCode || e.which;
     tecla = String.fromCharCode(key).toString();
@@ -29,7 +29,7 @@ if ((keynum == 8) || (keynum == 46))
 return true;
 return /\d/.test(String.fromCharCode(keynum));
 }
-</script>
+</script> -->
 <!-- <div class="hidden">
   @{{id_session="{!!Session::get('id_propietario')!!}"}}
 </div> -->
@@ -151,7 +151,7 @@ return /\d/.test(String.fromCharCode(keynum));
 @endsection
 @push('scripts')
    <script src="js/cliente/propietario.js"></script>
-   <!-- <script type="text/javascript" src="js/vue-resource.js"></script> -->
+   <script src="js/validacion.js"></script>
 
 @endpush
 <input type="hidden" name="route" value="{{url('/')}}">

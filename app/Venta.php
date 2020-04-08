@@ -14,9 +14,10 @@ class Venta extends Model
     	'folio',
     	'id_usuario',
     	'total'
-    ]; 
+    ];
+    
     public function vendedor(){
-        return $this->belongsTo(Usario::class, 'id_usuario','id_usuario');
+        return $this->belongsTo(Usuario::class, 'id_usuario','id_usuario');
     }
     public function detalles(){
         return $this->hasMany('App\Detalle_Venta','folio','folio');

@@ -75,6 +75,8 @@ class ApiUsersController extends Controller
 
         // $usuario->id_empleado = $request->get('id_empleado');
         $usuario->id_rol=$request->get('id_rol');
+        $usuario->usuario = $request->get('usuario');
+        $usuario->password = $request->get('password');
         $usuario->nombre = $request->get('nombre');
         $usuario->apellidop = $request->get('apellidop');
         $usuario->apellidom = $request->get('apellidom');

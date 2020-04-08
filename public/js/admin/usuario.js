@@ -84,7 +84,8 @@ new Vue({//declaramos una nueva instancia de vue
 			        this.calle=json.data.calle,
 			        this.cruzamiento=json.data.cruzamiento,
 			        this.localidad=json.data.localidad,
-			        this.municipio=json.data.municipio,
+					this.municipio=json.data.municipio,
+					this.activo=json.data.activo,
 			        this.ida=json.data.id_usuario
 			        $('#add_usuario').modal('show');
 				});
@@ -102,7 +103,8 @@ new Vue({//declaramos una nueva instancia de vue
 			        sexo:this.sexo,
 			        curp:this.curp,
 			        telefono:this.telefono,
-			        calle:this.calle,
+					calle:this.calle,
+					activo:this.activo,
 			        cruzamiento:this.cruzamiento,
 			        localidad:this.localidad,
 			        municipio:this.municipio

@@ -16,7 +16,8 @@ class ApiArticuloController extends Controller
     public function index()
     {
         //
-        return Articulo::all();
+        return $articulo = Articulo::all(); 
+        
     }
 
     /**
@@ -36,11 +37,7 @@ class ApiArticuloController extends Controller
         
         $articulo->cantidad=$request->get('cantidad');
         $articulo->save();
-        // $articulo->telefono=$request->get('telefono');
-        // $articulo->correo=$request->get('correo');
-        // $articulo->representante_legal=$request->get('representante_legal');
-        // $articulo->horario=$request->get('horario');
-        // $articulo->update();
+        
     }
 
     /**
@@ -71,10 +68,8 @@ class ApiArticuloController extends Controller
         $articulo->nombre=$request->get('nombre');
         $articulo->costo=$request->get('costo');
         $articulo->cantidad=$request->get('cantidad');
+        $articulo->activo=$request->get('activo');
         $articulo->update();
-        // $articulo->correo=$request->get('correo');
-        // $articulo->representante_legal=$request->get('representante_legal');
-        // $articulo->horario=$request->get('horario');
        
     }
 

@@ -28,7 +28,7 @@
 
     <div class="row">
       <div class="col-md-8 col-xs-12">
-          <div class="box box-primary table-responsive"></div>
+          <div class="table-responsive"></div>
           <table class="table table-striped table-bordered table-hover table-sm">
             <thead class="thead-dark">
               <th>Nombre</th>
@@ -37,7 +37,7 @@
               <th>Cantidad</th>
               <th>Opciones</th>
             </thead>
-            <tbody class="box box-info" >
+            <tbody>
               <tr v-for="(art,index) in filtro" v-bind:value="art.id_articulo">
                   <!--  v-bind:value="articulo.id_articulo" -->
                 <td >@{{art.nombre}}</td>

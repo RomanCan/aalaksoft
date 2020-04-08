@@ -63,6 +63,7 @@
               <td>@{{u.cruzamiento}}</td>
               <td>@{{u.localidad}}</td>
               <td>@{{u.municipio}}</td>
+              <!-- <td>@{{u.activo}}</td> -->
             </tr>
           </tbody>
         </table>
@@ -84,6 +85,7 @@
                   <div class="row">
                     <!-- inicio del col -->
                     <div class="col-md-6 col-xs-6">
+                      
                       <label>Nombre de usuario:</label><input type="text" placeholder="Nombre de Usuario" class="form-control" v-model="usuario" required onkeypress="return soloLetras(event);">
 
                       <label>Contraseña:</label><input type="text" placeholder="Contraseña" class="form-control" v-model="password">
