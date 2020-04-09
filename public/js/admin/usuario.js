@@ -111,6 +111,13 @@ new Vue({//declaramos una nueva instancia de vue
 				};
 				this.$http.patch(urlUsuario+'/'+this.ida,u)
 				.then(function(json){
+					Swal.fire({
+						position: 'center',
+						type: 'success',
+						title: 'Guardado exitosamente',
+						showConfirmButton: false,
+						timer: 1500
+					  })
 					this.getUsuario();
 					$('#add_usuario').modal('hide');
 				}).catch(function(json){

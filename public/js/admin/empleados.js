@@ -159,7 +159,7 @@ new Vue({
 			  showCancelButton: true,
 			  confirmButtonColor: '#3085d6',
 			  cancelButtonColor: '#d33',
-			  confirmButtonText: 'Si,Desactivalo',
+			  confirmButtonText: 'Si,Desactivar',
 			  cancelButtonText:'No,Cancelar',
 			}).then((result) => {
 			  if (result.value) {
@@ -222,12 +222,12 @@ new Vue({
 				// $('#e').modal('show');
 			});
 			Swal.fire({
-			  title: "¿Desea Desactivarlo?",
+			  title: "¿Desea Activarlo?",
 			  type: 'warning',
 			  showCancelButton: true,
 			  confirmButtonColor: '#3085d6',
 			  cancelButtonColor: '#d33',
-			  confirmButtonText: 'Si,Desactivalo',
+			  confirmButtonText: 'Si,Activar',
 			  cancelButtonText:'No,Cancelar',
 			}).then((result) => {
 			  if (result.value) {

@@ -77,8 +77,6 @@
 		<div class="col-md-4 col-sm-12 col-xs-12" v-for="empresax in empresa">
 
 			<label>Opcion: </label><span class="btn btn-outline-info" @click="editF(empresax.id_empresa)"><i class="">Editar Foto</i></span>
-			<label>Nota: <b>DEBERA</b> cambiar el <b>RFC</b> si desea cambiar el logo al mismo tiempo, no podra modificar solo un campo</label>
-			
 			<div class="form-group">
                 <label style="float:left">Logo de la empresa.</label>
         	    <div class="input-group">

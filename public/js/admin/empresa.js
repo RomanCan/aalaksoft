@@ -144,7 +144,13 @@ new Vue({
 
 			this.$http.post(urlLogo,data,config)
 			.then(function(json){
-				alert('LOGO AGREGADO');
+				Swal.fire({
+					position: 'center',
+					type: 'success',
+					title: 'Guardado exitosamente',
+					showConfirmButton: false,
+					timer: 1500
+				  })
 				$('#foto').modal('hide');
 				window.location.reload();
 			})
