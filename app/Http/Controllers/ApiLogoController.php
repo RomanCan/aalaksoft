@@ -28,7 +28,7 @@ class ApiLogoController extends Controller
     {
         //
 
-        $id=$request->get('rfc');
+        $id=$request->get('id_empresa');
 
         $empresa=Empresa::find($id);
         // $empresa->nombre_empresa=$request->get('nombre_empresa');

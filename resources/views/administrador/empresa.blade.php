@@ -2,12 +2,22 @@
 @section('contenido')
 
 <div id="empresa" align="center" style="margin: 10px">
+<!-- @{{$data.empresa}} -->
 		<h1 class="">Datos de la empresa</h1>
 		<hr>
 	<!-- inicio del row -->
 	<div class="row">
 		<div class="col-md-8 col-sm-12 col-xs-12" v-for="empresax in empresa">
-			<label>Opcion: </label><span class="btn btn-outline-primary" @click="editDatos(empresax.rfc)"><i class="">Editar</i></span>
+			<label>Opcion: </label><span class="btn btn-outline-primary" @click="editDatos(empresax.id_empresa)"><i class="">Editar</i></span>
+			<div class="form-group">
+                <label style="float:left">RFC de la empresa.</label>
+        	    <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-file-code"></i></span>
+                    </div>
+                    <label class="form-control">@{{empresax.rfc}}</label>
+                </div>
+            </div>
 			<div class="form-group">
                 <label style="float:left">Nombre de la empresa.</label>
         	    <div class="input-group">
@@ -66,17 +76,9 @@
 
 		<div class="col-md-4 col-sm-12 col-xs-12" v-for="empresax in empresa">
 
-			<label>Opcion: </label><span class="btn btn-outline-info" @click="editF(empresax.rfc)"><i class="">Editar Foto</i></span>
+			<label>Opcion: </label><span class="btn btn-outline-info" @click="editF(empresax.id_empresa)"><i class="">Editar Foto</i></span>
 			<label>Nota: <b>DEBERA</b> cambiar el <b>RFC</b> si desea cambiar el logo al mismo tiempo, no podra modificar solo un campo</label>
-			<div class="form-group">
-                <label style="float:left">RFC de la empresa.</label>
-        	    <div class="input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text"><i class="fas fa-file-code"></i></span>
-                    </div>
-                    <label class="form-control">@{{empresax.rfc}}</label>
-                </div>
-            </div>
+			
 			<div class="form-group">
                 <label style="float:left">Logo de la empresa.</label>
         	    <div class="input-group">
@@ -101,7 +103,7 @@
 				</div>
 				<!-- inicio del body -->
 				<div class="modal-body">
-					
+					<input type="text" placeholder="RFC" class="form-control" v-model="rfc" maxlength="8"> 
 					<input type="text" placeholder="Nombre" class="form-control" v-model="nombre_empresa">
 					<input type="text" placeholder="Dirección" class="form-control" v-model="direccion">
 					<input type="text" placeholder="Teléfono" class="form-control" v-model="telefono">
@@ -132,12 +134,12 @@
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<div class="modal-header" style="background: #2387FF; color: #fff">
-					<h4 class="modal-title">Editar Foto</h4>
+					<h4 class="modal-title">Editar Foto y RFC</h4>
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" v-on:click="salir">x</span></button>
 				</div>
 				<!-- inicio del body -->
 				<div class="modal-body">
-					<input type="text" placeholder="RFC" class="form-control" v-model="rfc" maxlength="8"> 
+					
 					<input type="file" class="form-control" @change="alSeleccionar" accept="image/jpeg" maxlength="1024"><br>
 					<!-- <p>
 						NOTA: SI ÚNICAMENTE CAMBIA EL RFC, EL LOGO NO SE CAMBIARÁ.

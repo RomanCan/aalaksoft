@@ -15,6 +15,7 @@ new Vue({
 	},
 	data:{
 		empresa:[],
+		id_empresa:'',
 		rfc:'',
 		nombre_empresa:'',
     	direccion: '',
@@ -70,11 +71,11 @@ new Vue({
 				correo:this.correo,
 				representante_legal:this.representante_legal,
 				horario:this.horario,
-				logo:this.logo
+				// logo:this.logo
 			};
 
 			console.log(empresa);
-			this.$http.put(urlEmpresa + '/' + this.auxRfc,empresa)
+			this.$http.put(urlEmpresa + '/' + this.auxEmpresa,empresa)
 			.then(function(json){
 				this.getDatos();
 				
@@ -94,23 +95,24 @@ new Vue({
 				this.correo='';
 				this.representante_legal='';
 				this.horario='';
-				this.logo='';
+				// this.logo='';
 		},
 
 		editDatos:function(id){
 			
 			this.$http.get(urlEmpresa + '/' + id)
 			.then(function(response){
-				this.auxRfc=response.data.rfc;
+				// this.id_empresa=response.data.id_empresa
+				// this.auxRfc=response.data.rfc;
 				this.rfc= response.data.rfc;
-				this.nombre_empresa= response.data.nombre_empresa;
-				this.direccion=response.data.direccion;
-				this.telefono= response.data.telefono;
-				this.correo= response.data.correo;
-				this.representante_legal= response.data.representante_legal;
-				this.horario= response.data.horario;
-				this.logo= response.data.logo;
-				this.auxEmpresa= response.data.rfc;
+				this.nombre_empresa= response.data.nombre_empresa
+				this.direccion=response.data.direccion
+				this.telefono= response.data.telefono
+				this.correo= response.data.correo
+				this.representante_legal= response.data.representante_legal
+				this.horario= response.data.horario
+				// this.logo= response.data.logo;
+				this.auxEmpresa= response.data.id_empresa
 				console.log(response);
 				$('#datos').modal('show');
 			});
@@ -118,20 +120,24 @@ new Vue({
 		},
 		editF:function(id){
 			this.$http.get(urlEmpresa+'/'+id)
-			.then(function(json){
+			.then(function(response){
+				
+				
+				this.auxEmpresa= response.data.id_empresa
+				this.rfc=response.data.rfc
+				this.logo= response.data.logo
 				$('#foto').modal('show');
-				this.rfc=json.data.rfc;
-				this.representante_legal=json.data.representante_legal;
-				this.logo= json.data.logo;
-				this.auxEmpresa= json.data.rfc;
+				console.log(response.data.rfc);
 			})
 		},		
-		cargarLogo:function()
+		cargarLogo:function(id)
 		{
+
 			var data = new FormData();
 			
 			data.append('logo',this.logo);
-			data.append('rfc',this.auxEmpresa)
+			data.append('id_empresa',this.auxEmpresa);
+
 			var config={
 				header:{'Content-Type':'image/jpg'}
 			}
@@ -140,6 +146,7 @@ new Vue({
 			.then(function(json){
 				alert('LOGO AGREGADO');
 				$('#foto').modal('hide');
+				window.location.reload();
 			})
 			.catch(function(json){
 				console.log(json)

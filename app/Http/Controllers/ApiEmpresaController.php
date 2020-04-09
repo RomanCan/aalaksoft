@@ -58,8 +58,8 @@ class ApiEmpresaController extends Controller
     public function show($id)
     {
         //
-        $empresa=Empresa::find($id);
-        return $empresa;
+        return $empresa=Empresa::find($id);
+        
     }
 
     /**

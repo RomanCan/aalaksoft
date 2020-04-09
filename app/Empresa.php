@@ -8,7 +8,7 @@ class Empresa extends Model
 {
     //
     protected $table = 'datos_empresa';
-    protected $primaryKey = 'rfc';
+    protected $primaryKey = 'id_empresa';
     public $timestamps=false;
     public $incrementing=false;
     public $fillable=[

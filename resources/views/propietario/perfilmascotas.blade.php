@@ -95,8 +95,8 @@
 						</div>
 						<div class="modal-footer">
 							<button type="button" class="btn btn-outline-danger" data-dismiss="modal" @click="salir">Cancelar</button>
-							<button type="submit" class="btn btn-outline-primary" @click="agregarMascota()">Guardar</button>
-							<button type="submit" class="btn btn-outline-info" @click="actualizarDatos()">Actualizar</button>
+							<button type="submit" class="btn btn-outline-primary" @click="agregarMascota()" v-if="!editando">Guardar</button>
+							<button type="submit" class="btn btn-outline-info" @click="actualizarDatos()" v-if="editando">Actualizar</button>
 							<!-- <button class="btn btn-primary" @click="actualizarM()">Foto</button> -->
 							<p></p>
 							
