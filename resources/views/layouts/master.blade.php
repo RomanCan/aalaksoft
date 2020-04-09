@@ -60,11 +60,9 @@
 				            <a class="button white" href="#">Registrate</a> -->
 				        </div>
    					</div>
-   					<!-- <div class="col-md-6">
-                        <div class="text">
-                             <h1 class="text">{{Session::get('nombre')}} </h1>
-                        </div>
-                    </div> -->
+   					<div class="col-md-6 col-xs-12" style="display:table-cell; vertical-align:middle;">
+                        <img src="img/galeria/estetica3.jpg" class="img-responsive img-rounded" alt="Responsive image">
+                    </div>
                 </div>
             </div>
         </header>

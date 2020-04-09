@@ -142,7 +142,7 @@
         <!-- inicio del row -->
         <div class="row">
             <!-- inicio del col -->
-            <div class="col-md-6 col-xs-12 ">
+            <div class="col-md-5 col-xs-12 ">
                 <section class="team">
                     <div class="text">
                         <h2>Nuestro Equipo</h2>
@@ -161,31 +161,31 @@
                       <!-- Wrapper for slides -->
                       <div class="carousel-inner" role="listbox">
                         <div class="item active" align="center">
-                          <img src="img/personal/erikamac.jpg" >
-                          <div class="carousel-caption" style="color: #ffffff; background: #2f4f4f">
-                            <h3>Érika Macías</h3>
-                            <p>Dueña y directora de la veterinaria</p>
+                          <img src="img/personal/erikamac.jpg" class="img-responsive img-rounded" alt="Responsive image">
+                          <div class="carousel-caption " style="color: #ffffff; background: #2f4f4f">
+                            <h4>Érika Macías Dueña y directora</h4>
+                            <!-- <p class=""> de la veterinaria</p> -->
                           </div>
                         </div>
                         <div class="item" align="center">
-                          <img src="img/personal/erikac.jpg" >
+                          <img src="img/personal/erikac.jpg" class="img-responsive img-rounded" alt="Responsive image">
                           <div class="carousel-caption" style="color: #ffffff; background: #2f4f4f">
-                            <h3>Érika Cocom</h3>
-                            <p>Internista Clínico</p>
+                            <h4>Érika Cocom Internista Clínico</h4>
+                            <!-- <p></p> -->
                           </div>
                         </div>
                         <div class="item" align="center">
-                          <img src="img/personal/ezequiel.jpg" >
+                          <img src="img/personal/ezequiel.jpg" class="img-responsive img-rounded" alt="Responsive image">
                           <div class="carousel-caption" style="color: #ffffff; background: #2f4f4f">
-                            <h3>Ezequiel Balam</h3>
-                            <p>Administrador</p>
+                            <h4>Ezequiel Balam Administrador</h4>
+                            <!-- <p></p> -->
                           </div>
                         </div>
                         <div class="item" align="center">
-                          <img src="img/personal/lucia.jpg" >
+                          <img src="img/personal/lucia.jpg" class="img-responsive img-rounded" alt="Responsive image">
                           <div class="carousel-caption" style="color: #ffffff; background: #2f4f4f">
-                            <h3>Lucía Cocom</h3>
-                            <p>Segunda titular veterinaria</p>
+                            <h4>Lucía Cocom Segunda titular </h4>
+                            <!-- <p>veterinaria</p> -->
                           </div>
                         </div>
                       </div>
@@ -204,7 +204,7 @@
             </div>
             <!-- fin del col -->
             <!-- inicio del col -->
-            <div class="col-md-6 col-xs-12">
+            <div class="col-md-7 col-xs-12">
                 <section class="contact_area" id="citas">
                     
                     <div class="text">
