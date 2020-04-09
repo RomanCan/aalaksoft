@@ -45,8 +45,11 @@ new Vue({
 				console.log(response);
 			});
 		},
-			showModal:function(){
+		showModal:function(){
 			$('#datos').modal('show');
+		},
+		showM:function(){
+			$('#foto').modal('show');
 		},
 		salir:function(){
 				this.rfc='';
@@ -95,7 +98,7 @@ new Vue({
 		},
 
 		editDatos:function(id){
-			$('#datos').modal('show');
+			
 			this.$http.get(urlEmpresa + '/' + id)
 			.then(function(response){
 				this.auxRfc=response.data.rfc;
@@ -109,16 +112,26 @@ new Vue({
 				this.logo= response.data.logo;
 				this.auxEmpresa= response.data.rfc;
 				console.log(response);
-
+				$('#datos').modal('show');
 			});
 
 		},
+		editF:function(id){
+			this.$http.get(urlEmpresa+'/'+id)
+			.then(function(json){
+				$('#foto').modal('show');
+				this.rfc=json.data.rfc;
+				this.representante_legal=json.data.representante_legal;
+				this.logo= json.data.logo;
+				this.auxEmpresa= json.data.rfc;
+			})
+		},		
 		cargarLogo:function()
 		{
 			var data = new FormData();
+			
 			data.append('logo',this.logo);
-			data.append('rfc',this.auxRfc);
-
+			data.append('rfc',this.auxEmpresa)
 			var config={
 				header:{'Content-Type':'image/jpg'}
 			}
@@ -126,7 +139,7 @@ new Vue({
 			this.$http.post(urlLogo,data,config)
 			.then(function(json){
 				alert('LOGO AGREGADO');
-				$('#datos').modal('hide');
+				$('#foto').modal('hide');
 			})
 			.catch(function(json){
 				console.log(json)

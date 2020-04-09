@@ -22,7 +22,5 @@ class Empresa extends Model
         'logo'
     ]; 
 
-    // public function tipo(){
-    //     return $this->belongsTo(Tipo::class,'id_tipo','id_tipo');
-    // }
+    
 }

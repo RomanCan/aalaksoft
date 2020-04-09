@@ -30,7 +30,7 @@ class ApiAdministradorController extends Controller
             // Session::put('foto',$resp[0]->foto);
             Session::put('id_usuario',$resp[0]->id_usuario);
     		if($resp[0]->rol->rol == "Administrador")
-    			return Redirect::to('perfiladmin');
+    			return Redirect::to('perfil');
     		elseif ($resp[0]->rol->rol =="Vendedor") 
     			return Redirect::to('perfilvendedor');
     	}else{
