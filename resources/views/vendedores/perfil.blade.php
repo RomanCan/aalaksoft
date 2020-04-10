@@ -5,7 +5,7 @@
   @{{id_session="{!!Session::get('id_usuario')!!}"}}
 </div> -->
 
-<secion id="usuario">
+<section id="usuario">
     <div class="container" align="center">
         <hr>
         <h2>Mi perfil</h2><br>
@@ -90,9 +90,9 @@
                             <!-- inicio del col -->
                             <div class="col-md-6 col-xs-6">
                             
-                            <label>Nombre de usuario:</label><input type="text" placeholder="Nombre de Usuario" class="form-control" v-model="usuario" required onkeypress="return soloLetras(event);">
+                            <label>Nombre de usuario:</label><input type="text" placeholder="Nombre de Usuario" class="form-control" v-model="usuario" maxlength="10">
 
-                            <label>Contraseña:</label><input type="text" placeholder="Contraseña" class="form-control" v-model="password">
+                            <label>Contraseña:</label><input type="text" placeholder="Contraseña" class="form-control" v-model="password" maxlength="10">
 
                             <label>Curp:</label><input type="text" placeholder="CURP" class="form-control" v-model="curp" maxlength="18">
                             
@@ -116,7 +116,7 @@
                             <div class="col-md-6 col-xs-6">
                             <label>Edad:</label><input type="text" maxlength="2" placeholder="Edad" class="form-control" v-model="edad" onkeypress="return soloNumeros(event);" required>
 
-                            <label>Sexo:</label><input type="text" placeholder="Sexo" class="form-control" v-model="sexo" required onkeypress="return soloLetras(event);">
+                            <label>Sexo: (F o M)</label><input type="text" placeholder="Sexo" class="form-control" v-model="sexo" required onkeypress="return soloLetras(event);" maxlength="1">
 
                             <label>Celular:</label><input type="text" maxlength="10" placeholder="Celular" class="form-control" v-model="telefono" onkeypress="return soloNumeros(event);" required>
                             </div>
@@ -268,9 +268,9 @@
                         <div class="row">
                             <!-- inicio del col -->
                             <div class="col-md-6 col-xs-6">
-                            <label>Nombre de usuario:</label><input type="text" placeholder="Nombre de Usuario" class="form-control" v-model="usuario" required onkeypress="return soloLetras(event);">
+                            <label>Nombre de usuario:</label><input type="text"maxlength="10" placeholder="Nombre de Usuario" class="form-control" v-model="usuario">
 
-                            <label>Contraseña:</label><input type="text" placeholder="Contraseña" class="form-control" v-model="password">
+                            <label>Contraseña:</label><input type="text" maxlength="10" placeholder="Contraseña" class="form-control" v-model="password">
 
                             <label>Curp:</label><input type="text" placeholder="CURP" class="form-control" v-model="curp" maxlength="18">
                             
@@ -333,8 +333,9 @@
 </section>
 @endsection
 @push('scripts')
-   <script src="js/vendedor/usuario.js"></script>
+   <script src="js/admin/usuario.js"></script>
    <script src="js/validacion.js"></script>
+   <!-- <script type="text/javascript" src="js/vue-resource.js"></script> -->
 
 @endpush
 <input type="hidden" name="route" value="{{url('/')}}">

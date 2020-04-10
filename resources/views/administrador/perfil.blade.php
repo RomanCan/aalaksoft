@@ -90,9 +90,9 @@
                             <!-- inicio del col -->
                             <div class="col-md-6 col-xs-6">
                             
-                            <label>Nombre de usuario:</label><input type="text" placeholder="Nombre de Usuario" class="form-control" v-model="usuario" required onkeypress="return soloLetras(event);">
+                            <label>Nombre de usuario:</label><input type="text" maxlength="15" placeholder="Nombre de usuario" class="form-control" v-model="usuario">
 
-                            <label>Contraseña:</label><input type="text" placeholder="Contraseña" class="form-control" v-model="password">
+                            <label>Contraseña:</label><input type="text" maxlength="15" placeholder="Contraseña" class="form-control" v-model="password">
 
                             <label>Curp:</label><input type="text" placeholder="CURP" class="form-control" v-model="curp" maxlength="18">
                             
@@ -100,11 +100,11 @@
                             <!-- fin del col -->
                             <!-- inicio del col -->
                             <div class="col-md-6 col-xs-6">
-                            <label>Nombre:</label><input type="text" placeholder="Nombre" class="form-control" v-model="nombre" required onkeypress="return soloLetras(event);">
+                            <label>Nombre:</label><input type="text" maxlength="30" placeholder="Nombre" class="form-control" v-model="nombre" required onkeypress="return soloLetras(event);">
                             
-                            <label>Apellido Paterno:</label><input type="text" placeholder="Apellido Paterno" class="form-control" v-model="apellidop" required onkeypress="return soloLetras(event);">
+                            <label>Apellido Paterno:</label><input type="text" maxlength="15" placeholder="Apellido Paterno" class="form-control" v-model="apellidop" required onkeypress="return soloLetras(event);">
 
-                            <label>Apellido Materno:</label><input type="text" placeholder="Apellido Materno" class="form-control" v-model="apellidom" required onkeypress="return soloLetras(event);">
+                            <label>Apellido Materno:</label><input type="text" maxlength="15" placeholder="Apellido Materno" class="form-control" v-model="apellidom" required onkeypress="return soloLetras(event);">
 
                             </div>
                             <!-- fin del col -->
@@ -126,7 +126,7 @@
 
                             <label>Cruzamientos:</label><input type="text" maxlength="8" placeholder="Cruzamiento" class="form-control" v-model="cruzamiento">
 
-                            <label>Localidad:</label><input type="text" placeholder="Localidad" class="form-control" v-model="localidad" required onkeypress="return soloLetras(event);">
+                            <label>Localidad:</label><input type="text" maxlength="25" placeholder="Localidad" class="form-control" v-model="localidad" required onkeypress="return soloLetras(event);">
                             </div>
                         </div> 
                         <!-- fin del row  -->
@@ -134,7 +134,7 @@
                         <div class="row">
                             <div class="col-md-6 col-xs-6">
                             <label>Municipio:</label>
-                            <input type="text" placeholder="Municipio" class="form-control text-center" v-model="municipio" required onkeypress="return soloLetras(event);">
+                            <input type="text" maxlength="25" placeholder="Municipio" class="form-control text-center" v-model="municipio" required onkeypress="return soloLetras(event);">
                             </div>
                         </div>
                         <!-- fin del row -->
@@ -268,9 +268,9 @@
                         <div class="row">
                             <!-- inicio del col -->
                             <div class="col-md-6 col-xs-6">
-                            <label>Nombre de usuario:</label><input type="text" placeholder="Nombre de Usuario" class="form-control" v-model="usuario" required onkeypress="return soloLetras(event);">
+                            <label>Nombre de usuario:</label><input type="text" placeholder="Nombre de Usuario" class="form-control" v-model="usuario" maxlength="10">
 
-                            <label>Contraseña:</label><input type="text" placeholder="Contraseña" class="form-control" v-model="password">
+                            <label>Contraseña:</label><input type="text"  placeholder="Contraseña" class="form-control" v-model="password" maxlength="10">
 
                             <label>Curp:</label><input type="text" placeholder="CURP" class="form-control" v-model="curp" maxlength="18">
                             
@@ -294,7 +294,7 @@
                             <div class="col-md-6 col-xs-6">
                             <label>Edad:</label><input type="text" maxlength="2" placeholder="Edad" class="form-control" v-model="edad" onkeypress="return soloNumeros(event);" required>
 
-                            <label>Sexo:</label><input type="text" placeholder="Sexo" class="form-control" v-model="sexo" required onkeypress="return soloLetras(event);">
+                            <label>Sexo: Sexo: (F o M)W</label><input type="text" placeholder="Sexo" class="form-control" v-model="sexo" required onkeypress="return soloLetras(event);">
 
                             <label>Celular:</label><input type="text" maxlength="10" placeholder="Celular" class="form-control" v-model="telefono" onkeypress="return soloNumeros(event);" required>
                             </div>
@@ -304,7 +304,7 @@
 
                             <label>Cruzamientos:</label><input type="text" maxlength="8" placeholder="Cruzamiento" class="form-control" v-model="cruzamiento">
 
-                            <label>Localidad:</label><input type="text" placeholder="Localidad" class="form-control" v-model="localidad" required onkeypress="return soloLetras(event);">
+                            <label>Localidad:</label><input type="text" maxlength="25" placeholder="Localidad"  class="form-control" v-model="localidad" required onkeypress="return soloLetras(event);">
                             </div>
                         </div> 
                         <!-- fin del row  -->
@@ -312,7 +312,7 @@
                         <div class="row">
                             <div class="col-md-6 col-xs-6">
                             <label>Municipio:</label>
-                            <input type="text" placeholder="Municipio" class="form-control text-center" v-model="municipio" required onkeypress="return soloLetras(event);">
+                            <input type="text" placeholder="Municipio" maxlength="25" class="form-control text-center" v-model="municipio" required onkeypress="return soloLetras(event);">
                             </div>
                         </div>
                         <!-- fin del row -->
