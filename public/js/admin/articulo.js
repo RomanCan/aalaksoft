@@ -87,6 +87,8 @@ new Vue({
 			.then(function(response){
 				this.getArticulos();
 				// console.log(response);
+			}).catch(function(response){
+
 			});
 			this.editar=false;
 			// $('#add_articulo').modal('hide');
@@ -154,6 +156,12 @@ new Vue({
 				    )
 				  	this.getArticulos();
 			  	}).catch(function(json){
+					Swal.fire({
+						position: 'center',
+						type: 'error',
+						title: 'Ha ocurrido un error',
+						text: 'verifique sus datos',
+					  })
 			  		console.log(json);
 			  	})
 

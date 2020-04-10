@@ -70,7 +70,7 @@ new Vue({
 			};
 			this.$http.post(urlEmpleado,e)
 			.then(function(json){
-				this.getEmpleado();
+				$('#e').modal('hide');
 				Swal.fire({
 				  position: 'center',
 				  type: 'success',
@@ -78,10 +78,12 @@ new Vue({
 				  showConfirmButton: false,
 				  timer: 1500
 				})
-				$('#e').modal('hide');
+				this.getEmpleado();
+				
 			}).catch(function(json){
 				console.log(json);
 			});
+			// window.location.reload();
 		},
 		editarE:function(id){
 			this.editar=true;
@@ -122,10 +124,6 @@ new Vue({
 			};
 			this.$http.patch(urlEmpleado +'/'+this.ida,ee)
 			.then(function(json){
-				this.getEmpleado();
-			});
-			this.editar=false;
-			$('#e').modal('hide');
 				Swal.fire({
 				  position: 'center',
 				  type: 'success',
@@ -133,6 +131,17 @@ new Vue({
 				  showConfirmButton: false,
 				  timer: 1500
 				})
+				window.location.reload();
+			}).catch(function(json){
+				Swal.fire({
+					position: 'center',
+					type: 'error',
+					title: 'Ha ocurrido un error',
+					text: 'verifique sus datos',
+				  })
+			});
+			this.editar=false;
+			$('#e').modal('hide');
 		},
 		// desactivar empleado
 		eliminarE:function(id){
@@ -190,6 +199,11 @@ new Vue({
 				  		window.location.reload();
 				  	// this.getEmpleado();
 			  	}).catch(function(json){
+					Swal.fire({
+						position: 'center',
+						type: 'error',
+						title: 'Ha ocurrido un error',
+					  })
 			  		console.log(json);
 			  	})
 
@@ -258,6 +272,12 @@ new Vue({
 				  	window.location.reload();
 				  	// this.getEmpleado();
 			  	}).catch(function(json){
+					Swal.fire({
+						position: 'center',
+						type: 'error',
+						title: 'Ha ocurrido un error',
+						text: 'verifique sus datos',
+					  })
 			  		console.log(json);
 			  	})
 
@@ -273,6 +293,8 @@ new Vue({
 
 		salir:function(){
 			this.editar=false;
+			this.usuario='';
+			this.password='';
 				this.nombre='';
 				this.apellidop='';
 				this.apellidom='';

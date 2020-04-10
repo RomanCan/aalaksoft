@@ -26,9 +26,7 @@ new Vue({//declaramos una nueva instancia de vue
         cruzamiento:'',
         localidad:'',
         municipio:'',
-		id_rol:'',
-		activo:'',
-		activado:1,
+        id_rol:'',
         // id_usuario:'',
         ida:''
 		// editando:false,
@@ -50,28 +48,46 @@ new Vue({//declaramos una nueva instancia de vue
 				$('#add_usuario').modal('show');
 			},
 
+			// agregarUsuario:function(){
+			// 	//Construyendo un objeto de tipo Json para enviar a la Api
+			// 	var registro={nombre_usuario:this.nombre_usuario,
+			// 				  apellidop:this.apellidop,
+			// 				  apellidom:this.apellidom,
+			// 				  nombre:this.nombre,
+			// 				  password:this.password};
+			// 	//Limpiar campos
+			// 	// this.id='';
+			// 	this.nombre_usuario='';
+			// 	this.apellidop='';
+			// 	this.apellidom='';
+			// 	this.nombre='';
+			// 	this.password='';
+			// 	//Para poder entrar al método store necesitamos de un post y se envia al Json
+			// 	this.$http.post(urlUsuario,registro).then(function(response){
+			// 		this.getUsuario();
+			// 		$('#add_usuario').modal('hide');
+			// 	});
+			// },
 			editarUsuario:function(id){
 				this.$http.get(urlUsuario + '/' + id)
 				.then(function(json){
-					// this.id_rol=json.data.id_rol,
-					this.usuario=json.data.usuario
-			        this.password=json.data.password
-			        this.nombre=json.data.nombre
-			        this.apellidop=json.data.apellidop
-			        this.apellidom=json.data.apellidom
-					this.edad=json.data.edad
-					this.activo=json.data.activo
-			        this.sexo=json.data.sexo
-			        this.curp=json.data.curp
-			        this.telefono=json.data.telefono
-			        this.calle=json.data.calle
-			        this.cruzamiento=json.data.cruzamiento
-			        this.localidad=json.data.localidad
-					this.municipio=json.data.municipio
-					
+					this.id_rol=json.data.id_rol,
+					this.usuario=json.data.usuario,
+			        this.password=json.data.password,
+			        this.nombre=json.data.nombre,
+			        this.apellidop=json.data.apellidop,
+			        this.apellidom=json.data.apellidom,
+			        this.edad=json.data.edad,
+			        this.sexo=json.data.sexo,
+			        this.curp=json.data.curp,
+			        this.telefono=json.data.telefono,
+			        this.calle=json.data.calle,
+			        this.cruzamiento=json.data.cruzamiento,
+			        this.localidad=json.data.localidad,
+					this.municipio=json.data.municipio,
+					this.activo=json.data.activo,
 			        this.ida=json.data.id_usuario
-					$('#add_usuario').modal('show');
-					console.log(json.data);
+			        $('#add_usuario').modal('show');
 				});
 			},
 			actualizarUsuario:function(){
@@ -87,14 +103,21 @@ new Vue({//declaramos una nueva instancia de vue
 			        sexo:this.sexo,
 			        curp:this.curp,
 			        telefono:this.telefono,
-			        calle:this.calle,
+					calle:this.calle,
+					activo:this.activo,
 			        cruzamiento:this.cruzamiento,
 			        localidad:this.localidad,
-					municipio:this.municipio,
-					activo:this.activado
+			        municipio:this.municipio
 				};
 				this.$http.patch(urlUsuario+'/'+this.ida,u)
 				.then(function(json){
+					Swal.fire({
+						position: 'center',
+						type: 'success',
+						title: 'Guardado exitosamente',
+						showConfirmButton: false,
+						timer: 1500
+					  })
 					this.getUsuario();
 					$('#add_usuario').modal('hide');
 				}).catch(function(json){

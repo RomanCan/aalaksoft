@@ -1,14 +1,14 @@
 @extends('layouts.mastervend')
 @section('contenido')
-	<div class="hidden">
+	<div class="d-none">
 		@{{id_usuario="{!!Session::get('id_usuario')!!}"}}
 	</div>
 
 	<div id="ventas">
 	<br>
-	<h1 class="container">Ventas</h1>
-		<h3>Folio: @{{folio}}</h3>
-		<h3>Fecha: @{{fecha}}</h3>
+	<h1 class="container" align="center">Ventas</h1>
+		<h3 style="margin:20px 20px">Folio: @{{folio}}</h3>
+		<h3 style="margin:20px 20px">Fecha: @{{fecha}}</h3>
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6 col-xs-8">
@@ -23,7 +23,7 @@
 		</div><hr>
 		<div class="row">
 			<div class="col-md-7 col-xs-8">
-				<table class="table table-bordered table-sm">
+				<table class="table table-bordered table-sm table-striped">
 					<thead class="thead-dark">
 						<th>Codigo</th>
 						<th>Nombre</th>
@@ -55,17 +55,16 @@
 						</tr>
 					</tbody>
 				</table>
-				@{{cantidades}}
+				<!-- @{{cantidades}} -->
 			</div>
 			
 			<!-- Fin del row -->
 		</div>
 		<div class="row">
-			<div class="col-md-6 col-xs-12">
-				<div class="col-md-4 col-xs-6 ">
+			<div class="col-md-6 col-xs-12" >				
 				<table class="table table-bordered">
 					<tr>
-						<th width="auto" style="background: #FFFFCC">Total</th>
+						<th style="background: #FFFFCC">Total</th>
 						<td><h4>$ @{{total}}</h4></td>
 					</tr>
 					<tr>
@@ -79,7 +78,6 @@
 						<td><b><h4 class="text-primary">@{{cambio}}</h4></b></td>
 					</tr>
 				</table>
-			</div>
 			</div>
 		</div>
 	</div>

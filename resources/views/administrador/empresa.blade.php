@@ -101,20 +101,20 @@
 				</div>
 				<!-- inicio del body -->
 				<div class="modal-body">
-					<input type="text" placeholder="RFC" class="form-control" v-model="rfc" maxlength="8"> 
-					<input type="text" placeholder="Nombre" class="form-control" v-model="nombre_empresa">
-					<input type="text" placeholder="Dirección" class="form-control" v-model="direccion">
-					<input type="text" placeholder="Teléfono" class="form-control" v-model="telefono">
-					<input type="text" placeholder="Correo" class="form-control" v-model="correo">
-					<input type="text" placeholder="Representante legal" class="form-control" v-model="representante_legal">
-					<input type="text" placeholder="Horario" class="form-control" v-model="horario">
-					<!-- <input type="file" class="form-control" @change="alSeleccionar" accept="image/jpeg" maxlength="1024"><br> -->
-					<!-- <p>
-						NOTA: SI ÚNICAMENTE CAMBIA EL RFC, EL LOGO NO SE CAMBIARÁ.
-						Tiene que Actualizar el RFC y el logo al mismo tiempo para que 
-						el logo de su empresa se actualice</p>
-					<br> -->
-							{{-- elementos html --}}
+					<div class="row">
+						<div class="col-md-6 col-sm-6 col-xs-12">
+							<label>RFC:</label><input type="text" placeholder="RFC" class="form-control" v-model="rfc" maxlength="13"> 
+							<label>Nombre:</label><input type="text" placeholder="Nombre" class="form-control" v-model="nombre_empresa">
+							<label>Direccion:</label><input type="text" placeholder="Dirección" class="form-control" v-model="direccion">
+							<label>Representante:</label><input type="text" placeholder="Representante legal" class="form-control" v-model="representante_legal">
+							
+						</div>
+						<div class="col-md-6 col-sm-6 col-xs-12">
+							<label>Teléfono:</label><input type="text" maxlength="10" placeholder="Teléfono" class="form-control" v-model="telefono" onkeypress="return soloNumeros(event);" required>
+							<label>Correo:</label><input type="text" placeholder="Correo" class="form-control" v-model="correo">
+							<label>Horario:</label><input type="text"  maxlength="18" placeholder="9:30 am - 11:00 pm" class="form-control" v-model="horario">
+						</div>
+					</div>
 				</div>
 				<!-- fin del body -->
 				<div class="modal-footer">

@@ -30,6 +30,8 @@ class ApiEmpleadoController extends Controller
         $empleado = new Usuario;
 
         // $empleado->id_usuario = $request->get('id_usuario');
+        $empleado->usuario = $request->get('usuario');
+        $empleado->password = $request->get('password');
         $empleado->nombre = $request->get('nombre');
         $empleado->apellidop = $request->get('apellidop');
         $empleado->apellidom = $request->get('apellidom');

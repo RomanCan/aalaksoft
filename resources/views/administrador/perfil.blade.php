@@ -5,7 +5,7 @@
   @{{id_session="{!!Session::get('id_usuario')!!}"}}
 </div> -->
 
-<secion id="usuario">
+<section id="usuario">
     <div class="container" align="center">
         <hr>
         <h2>Mi perfil</h2><br>
@@ -116,7 +116,7 @@
                             <div class="col-md-6 col-xs-6">
                             <label>Edad:</label><input type="text" maxlength="2" placeholder="Edad" class="form-control" v-model="edad" onkeypress="return soloNumeros(event);" required>
 
-                            <label>Sexo:</label><input type="text" placeholder="Sexo" class="form-control" v-model="sexo" required onkeypress="return soloLetras(event);">
+                            <label>Sexo: (F o M)</label><input type="text" placeholder="Sexo" class="form-control" v-model="sexo" required onkeypress="return soloLetras(event);" maxlength="1">
 
                             <label>Celular:</label><input type="text" maxlength="10" placeholder="Celular" class="form-control" v-model="telefono" onkeypress="return soloNumeros(event);" required>
                             </div>

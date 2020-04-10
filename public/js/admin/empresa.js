@@ -155,6 +155,12 @@ new Vue({
 				window.location.reload();
 			})
 			.catch(function(json){
+				Swal.fire({
+					position: 'center',
+					type: 'error',
+					title: 'Ha ocurrido un error',
+					text: 'Verifique si introdujo su logo',
+				  })
 				console.log(json)
 			})
 

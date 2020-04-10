@@ -121,6 +121,12 @@ new Vue({//declaramos una nueva instancia de vue
 					this.getUsuario();
 					$('#add_usuario').modal('hide');
 				}).catch(function(json){
+					Swal.fire({
+						position: 'center',
+						type: 'error',
+						title: 'Ha ocurrido un error',
+						text: 'verifique sus datos',
+					  })
 					console.log(json);
 				});
 			},

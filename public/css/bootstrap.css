@@ -6264,8 +6264,8 @@ button.close {
 .carousel-inner {
   position: relative;
   /*width: 100%;*/
-  width: 70%;/*yo lo agrege*/
-  height: 70%;/*yo lo agrege*/
+  width: 90%;/*yo lo agrege*/
+  height: 90%;/*yo lo agrege*/
   overflow: hidden;
   margin-left: auto;/*yo lo agrege (centrado)*/
   margin-right: auto;/*yo lo agrege(centrado)*/

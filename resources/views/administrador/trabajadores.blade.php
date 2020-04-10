@@ -8,12 +8,12 @@
 	
 	
 	<div class="row" align="center justify">
-		<div class="col-md-12 col-xs-2" align="left">
+		<div class="col-md-12 col-sm-12 col-xs-12" align="left">
 	        <br> 
 			<button type="button" class="btn btn-info" @click="showModal()">Agregar +</button>
       	</div><br><br><br>
       	
-		<div class="col-md-10 col-xs-10 table-responsive">
+		<div class="col-md-12 col-sm-12 col-xs-12 table-responsive">
 			<table class="table table-hover table-borderless table-sm">
 				<thead align="center" class="thead-dark">
 					<th>Nombre/Usuario</th>
@@ -29,7 +29,7 @@
 					<th>Cruzamiento</th>
 					<th>Localidad</th> -->
 					<th>Municipio</th>
-					<th>Activo</th>
+					<!-- <th>Activo</th> -->
 					<th>Opciones</th>
 				</thead>
 				<tbody>
@@ -47,7 +47,7 @@
 						<td>@{{empleado.cruzamiento}}</td>
 						<td>@{{empleado.localidad}}</td> -->
 						<td>@{{empleado.municipio}}</td>
-						<td>@{{empleado.activo}}</td>
+						<!-- <td>@{{empleado.activo}}</td> -->
 						<td class="btn-group" role="group">
 							<span class="btn btn-outline-success"  @click="editarE(empleado.id_usuario)"><i class="fas fa-edit"></i></span>
 							<span class="btn btn-outline-danger" @click="eliminarE(empleado.id_usuario)"><i class="fas fa-trash"></i></span>
@@ -66,7 +66,7 @@
 			<!-- inicio de segunda tabla para desactivados -->
 			<div class="row" align="center justify">
 				
-				<div class="col-md-10 col-xs-10 table-responsive">
+				<div class="col-md-12 col-sm-12 col-xs-12 table-responsive">
 					<table class="table table-hover table-borderless table-sm">
 						<thead align="center" class="thead-dark">
 							<th>Nombre/Usuario</th>
@@ -82,7 +82,7 @@
 							<th>Cruzamiento</th>
 							<th>Localidad</th> -->
 							<th>Municipio</th>
-							<th>Activo</th>
+							<!-- <th>Activo</th> -->
 							<th>Opciones</th>
 						</thead>
 						<tbody>
@@ -100,7 +100,7 @@
 								<td>@{{em.cruzamiento}}</td>
 								<td>@{{em.localidad}}</td> -->
 								<td>@{{em.municipio}}</td>
-								<td>@{{em.activo}}</td>
+								<!-- <td>@{{em.activo}}</td> -->
 								<td class="btn-group" role="group">
 									<!-- <span class="btn btn-outline-success"  @click="editarDes(em.id_usuario)"><i class="fas fa-edit"></i></span>
 									<span class="btn btn-outline-danger" @click="eliminarDes(em.id_usuario)"><i class="fas fa-trash"></i></span> -->
@@ -132,18 +132,19 @@
 				<div class="modal-body">
 					<div class="row">
 						<div class="col-md-6">
-							<label v-if="!editar">Nombre de usuario</label><input v-if="!editar" type="text" placeholder="Nombre de usuario" class="form-control" v-model="usuario">
-							<label>Nombre:</label><input type="text" placeholder="Nombre" class="form-control" v-model="nombre">
-							<label>Apellido Paterno</label><input type="text" placeholder="Apellido Paterno" class="form-control" v-model="apellidop">
-							<label>Edad:</label><input type="number" maxlength="2" placeholder="Edad" class="form-control" v-model="edad">
+							<label v-if="!editar">Nombre de usuario</label><input v-if="!editar" maxlength="15" type="text" placeholder="Nombre de usuario" class="form-control" v-model="usuario">
+							<label>Nombres:</label><input type="text" maxlength="30" placeholder="Nombre" class="form-control" v-model="nombre" required onkeypress="return soloLetras(event);">
+							<label>Apellido Paterno</label><input type="text" maxlength="15" placeholder="Apellido Paterno" class="form-control" v-model="apellidop" required onkeypress="return soloLetras(event);">
+							<label>Apellido Materno</label><input type="text" maxlength="15" placeholder="Apellido Materno" class="form-control" v-model="apellidom" required onkeypress="return soloLetras(event);">
+							
 						</div>
 						<div class="col-md-6">
 							
-							<label v-if="!editar">Contraseña</label><input v-if="!editar" type="text" placeholder="Contraseña" class="form-control" v-model="password">
-							<label>Apellido Materno</label><input type="text" placeholder="Apellido Materno" class="form-control" v-model="apellidom">
+							<label v-if="!editar">Contraseña</label><input v-if="!editar" maxlength="15" type="text" placeholder="Contraseña" class="form-control" v-model="password">
+							<label>Edad:</label><input type="text" maxlength="2" placeholder="Edad" class="form-control" v-model="edad" onkeypress="return soloNumeros(event);" required>
 							
-							<label>Telefono:</label><input type="text" maxlength="10" placeholder="Celular" class="form-control" v-model="telefono">
-							<label>Municipio:</label><input type="text" placeholder="Municipio" class="form-control" v-model="municipio">
+							<label>Telefono:</label><input type="text" maxlength="10" placeholder="Celular" class="form-control" v-model="telefono" onkeypress="return soloNumeros(event);" required>
+							<label>Municipio:</label><input type="text" maxlength="30" placeholder="Municipio" class="form-control" v-model="municipio" required onkeypress="return soloLetras(event);">
 							<!-- <label>Curp:</label><input type="text" maxlength="18" placeholder="CURP" class="form-control" v-model="curp"> -->
 						</div>
 					</div>
@@ -163,6 +164,7 @@
 @endsection
 @push('scripts')
 	<script type="text/javascript" src="js/admin/empleados.js"></script>
+	<script src="js/validacion.js"></script>
 @endpush
 
 <input type="hidden" name="route" value="{{url('/')}}">
