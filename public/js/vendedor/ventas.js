@@ -36,16 +36,35 @@ function init(){
 								'cantidad':1,
 								'total':json.data.costo
 							}
-					if(venta.id_articulo)
+					if(venta.id_articulo){
 						this.ventas.push(venta);
-
+					}else{
+						Swal.fire({
+							position: 'center',
+							type: 'error',
+							title: 'Ha ocurrido un error',
+							text: 'Ingrese solo el codigo',
+						})
+					}
 					this.codigo = '';
 					this.$refs.buscar.focus();
 				})
 			}, //Fin getProducto
 
 			eliminarProducto:function(id){
-				this.ventas.splice(id,1);
+				Swal.fire({
+					title: "¿Estas seguro?",
+					type: 'warning',
+					showCancelButton: true,
+					confirmButtonColor: '#3085d6',
+					cancelButtonColor: '#d33',
+					confirmButtonText: 'Si, Continuar',
+					cancelButtonText:'No, Cancelar',
+				}).then((result) => {
+					if (result.value) {
+						this.ventas.splice(id,1);
+					}
+				})
 			},
 
 			// addProd:function(id){
@@ -62,31 +81,45 @@ function init(){
 				this.folio = 'VTA-'+ moment().format('YYMMDDhmmss');
 			},
 			vender:function(){
-				var det= [];
-				for (var i =0; i < this.ventas.length; i++) {
-					det.push({
-						id_articulo:this.ventas[i].id_articulo,
-						// nombre:this.ventas[i].nombre,
-						precio:this.ventas[i].costo,
-						cantidad:this.cantidades[i],
-						total:this.ventas[i].costo * this.cantidades[i]
-					})
-				}
-				var ven = {
-					folio:this.folio,
-					id_usuario:4,
-					total:this.tot,
-					detalles: det
-				}
-				console.log(ven);
+				Swal.fire({
+					title: "¿Estas seguro?",
+					type: 'warning',
+					showCancelButton: true,
+					confirmButtonColor: '#3085d6',
+					cancelButtonColor: '#d33',
+					confirmButtonText: 'Si, Continuar',
+					cancelButtonText:'No, Cancelar',
+				}).then((result) => {
+					if (result.value) {
+					
+						var det= [];
+						for (var i =0; i < this.ventas.length; i++) {
+							det.push({
+								id_articulo:this.ventas[i].id_articulo,
+								// nombre:this.ventas[i].nombre,
+								precio:this.ventas[i].costo,
+								cantidad:this.cantidades[i],
+								total:this.ventas[i].costo * this.cantidades[i]
+							})
+						}
+						var ven = {
+							folio:this.folio,
+							id_usuario:4,
+							total:this.tot,
+							detalles: det
+						}
+						console.log(ven);
+		
+						this.$http.post(urlventa,ven)
+						.then(function(json){
+							console.log(json.data);
+						}).catch(function(a){
+							console.log(a.data);
+						});
+						window.location.reload();	
 
-				this.$http.post(urlventa,ven)
-				.then(function(json){
-					console.log(json.data);
-				}).catch(function(a){
-					console.log(a.data);
-				});
-				window.location.reload();
+					}
+				})
 			}
 
 		},

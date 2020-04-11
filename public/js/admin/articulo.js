@@ -138,38 +138,33 @@ new Vue({
 		},
 		eliminarArticulo:function(id){
 			Swal.fire({
-			  title: "No podras revertir este cambio!,¿Estas seguro?",
-			  type: 'warning',
-			  showCancelButton: true,
-			  confirmButtonColor: '#3085d6',
-			  cancelButtonColor: '#d33',
-			  confirmButtonText: 'Si,borralo',
-			  cancelButtonText:'No,cancelar',
+				title: "No podras revertir este cambio!,¿Estas seguro?",
+				type: 'warning',
+				showCancelButton: true,
+				confirmButtonColor: '#3085d6',
+				cancelButtonColor: '#d33',
+				confirmButtonText: 'Si,borralo',
+				cancelButtonText:'No,cancelar',
 			}).then((result) => {
-			  if (result.value) {
-			  	this.$http.delete(urlallart +'/'+id).then(response=>{
-				  		Swal.fire(
+			  	if (result.value) {
+					this.$http.delete(urlallart +'/'+id).then(response=>{
+							Swal.fire(
 
-				      	'Ha sido eliminado exitosamente',
-				      	'',
-				      	'success'
-				    )
-				  	this.getArticulos();
-			  	}).catch(function(json){
-					Swal.fire({
-						position: 'center',
-						type: 'error',
-						title: 'Ha ocurrido un error',
-						text: 'verifique sus datos',
-					  })
-			  		console.log(json);
-			  	})
-
-			 //    .then(function(json){
-				// 	this.getArticulos();
-				// });
-
-			  }
+							'Ha sido eliminado exitosamente',
+							'',
+							'success'
+						)
+						this.getArticulos();
+					}).catch(function(json){
+						Swal.fire({
+							position: 'center',
+							type: 'error',
+							title: 'Ha ocurrido un error',
+							text: 'verifique sus datos',
+						})
+						console.log(json);
+					})
+			  	}
 			})
 
 
