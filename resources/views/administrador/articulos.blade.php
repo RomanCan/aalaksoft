@@ -95,11 +95,11 @@
               <div class="modal-body" align="center">
                 <div class="row">
                   <div class="col-md-6 col-sm-6 col-xs-6">
-                    <label>Nombre:</label><input type="text" placeholder="Nombre" v-model="nombre" class="form-control" maxlength="30">
+                    <label>Nombre:</label><input type="text" placeholder="Nombre" v-model="nombre" class="form-control" maxlength="50">
                     <label>Costo ($):</label><input type="text" placeholder="Costo" v-model="costo" class="form-control" maxlength="4" onkeypress="return soloNumeros(event);" required>
                   </div>
                   <div class="col-md-6 col-sm-6 col-xs-6">
-                    <label>Cantidad de articulos:</label><input type="number" placeholder="Cantidad" v-model="cantidad" class="form-control" maxlength="4" onkeypress="return soloNumeros(event);" required>
+                    <label>Cantidad de articulos:</label><input type="text" placeholder="Cantidad" v-model="cantidad" class="form-control" maxlength="4" onkeypress="return soloNumeros(event);" required>
                     <label>Producto/Servicio</label><select class="form-control" v-model="id_tipo">
                       <!-- <option selected="Seleccione una opcion"></option> -->
                       <option v-for="t in tipos" v-bind:value="t.id_tipo">@{{t.nombre}}</option>

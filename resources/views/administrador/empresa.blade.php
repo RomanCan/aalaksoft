@@ -103,10 +103,10 @@
 				<div class="modal-body">
 					<div class="row">
 						<div class="col-md-6 col-sm-6 col-xs-12">
-							<label>RFC:</label><input type="text" placeholder="RFC" class="form-control" v-model="rfc" maxlength="13"> 
-							<label>Nombre:</label><input type="text" placeholder="Nombre" class="form-control" v-model="nombre_empresa">
+							<label>RFC:</label><input type="text" maxlength="10" placeholder="RFC" class="form-control" v-model="rfc" maxlength="13"> 
+							<label>Nombre:</label><input type="text" maxlength="120" placeholder="Nombre" class="form-control" v-model="nombre_empresa">
 							<label>Direccion:</label><input type="text" placeholder="Dirección" class="form-control" v-model="direccion">
-							<label>Representante:</label><input type="text" placeholder="Representante legal" class="form-control" v-model="representante_legal">
+							<label>Representante:</label><input type="text" maxlength="40" placeholder="Representante legal" class="form-control" v-model="representante_legal">
 							
 						</div>
 						<div class="col-md-6 col-sm-6 col-xs-12">
