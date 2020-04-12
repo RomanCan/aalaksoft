@@ -47,27 +47,6 @@ new Vue({//declaramos una nueva instancia de vue
 			showModal:function(){
 				$('#add_usuario').modal('show');
 			},
-
-			// agregarUsuario:function(){
-			// 	//Construyendo un objeto de tipo Json para enviar a la Api
-			// 	var registro={nombre_usuario:this.nombre_usuario,
-			// 				  apellidop:this.apellidop,
-			// 				  apellidom:this.apellidom,
-			// 				  nombre:this.nombre,
-			// 				  password:this.password};
-			// 	//Limpiar campos
-			// 	// this.id='';
-			// 	this.nombre_usuario='';
-			// 	this.apellidop='';
-			// 	this.apellidom='';
-			// 	this.nombre='';
-			// 	this.password='';
-			// 	//Para poder entrar al método store necesitamos de un post y se envia al Json
-			// 	this.$http.post(urlUsuario,registro).then(function(response){
-			// 		this.getUsuario();
-			// 		$('#add_usuario').modal('hide');
-			// 	});
-			// },
 			editarUsuario:function(id){
 				this.$http.get(urlUsuario + '/' + id)
 				.then(function(json){
@@ -130,40 +109,6 @@ new Vue({//declaramos una nueva instancia de vue
 					console.log(json);
 				});
 			},
-
-		// 	guardarUsuario:function(){
-		// 	if (this.nombre_usuario && this.apellidop && this.apellidom && this.nombre  && this.password)
-		// 	{
-		// 		var data = new FormData();
-
-		// 		data.append('nombre',this.nombre);
-		// 		data.append('nombre_usuario',this.nombre_usuario);
-		// 		data.append('apellidop',this.apellidop);
-		// 		data.append('apellidom',this.apellidom);
-		// 		data.append('password',this.password);
-		// 		alert('Usuario agregado con éxito');
-		// 		// console.log();
-			
-		// 		this.$http.post(urlUsuario,data)
-		// 		.then(function(json){
-				
-		// 		})
-		// 		.catch(function(json){
-		// 		console.log(json);
-		// 		})
-
-		// 		this.nombre_usuario='';
-		// 		this.apellidop='';
-		// 		this.apellidom='';
-		// 		this.nombre='';
-		// 		this.password='';
-		// 	}
-		// 	else
-		// 	{ 
-		// 		alert('No deje algún campo vacío');
-		// 		return false;
-		// 	}
-		// }
 
 		}
 })

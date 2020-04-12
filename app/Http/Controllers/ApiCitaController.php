@@ -17,7 +17,10 @@ class ApiCitaController extends Controller
     public function index()
     {
         //
-        return $cita = Cita::all();
+        $id = Session::get('nombre_usuario');
+
+        return $cita=Cita::where('nombre_usuario','=',$id)->get();
+        // return $cita = Cita::all();
     }
 
     /**

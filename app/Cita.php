@@ -14,7 +14,8 @@ class Cita extends Model
     public $fillable = [
         'fecha_cita',
         'nombre_usuario',
-        'id_mascota'
+        'id_mascota',
+        'descripcion'
     ];
 
     public function propietario(){

@@ -11,9 +11,11 @@ new Vue({
       },
       el:'#cita',
       data:{
+          
           citas:[],
           propietarios:[],
           mascotas:[],
+          id_session:'',
           idaux:'',
           nombre_usuario:'',
           id_mascota:'',
@@ -53,7 +55,7 @@ new Vue({
           },
           agregarC:function(){
               var c={
-                  nombre_usuario:this.nombre_usuario,
+                  nombre_usuario:this.id_session,
                   id_mascota:this.id_mascota,
                   descripcion:this.descripcion,
                   fecha_cita:this.fecha_cita
@@ -61,7 +63,7 @@ new Vue({
               this.$http.post(urlCita,c)
               .then(function(json){
                 $('#add_c').modal('hide');
-
+                console.log(json.data);
                 Swal.fire({
                   position: 'center',
                   type: 'success',
@@ -71,6 +73,8 @@ new Vue({
                 })
                   this.getCitas();
 
+              }).catch(function(json){
+                  console.log(json.data);
               });
                   this.nombre_usuario='';
                   this.id_mascota='';
@@ -91,7 +95,7 @@ new Vue({
           },
           actualizarC:function(){
             var cc={
-                  nombre_usuario:this.nombre_usuario,
+                  nombre_usuario:this.id_session,
                   id_mascota:this.id_mascota,
                   descripcion:this.descripcion,
                   fecha_cita:this.fecha_cita
@@ -114,6 +118,15 @@ new Vue({
                   this.descripcion='';
                   this.fecha_cita='';
           },
+          prueba:function(){
+            Swal.fire({
+              position: 'center',
+              type: 'success',
+              title: 'Guardado exitosamente',
+              showConfirmButton: false,
+              timer: 1500
+            })
+          }
 
       },
 })

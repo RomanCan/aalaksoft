@@ -190,9 +190,9 @@
         <ul class="nav nav-pills nav-sidebar flex-column" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-          <li class="nav-item has-treeview menu-open">
+          <li class="nav-item has-treeview ">
             <a href="{{url('perfilpropietario')}}" class="nav-link">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <i class="nav-icon fas fa-user"></i>
               <p>
                 Perfil
                 <!-- <i class="right fas fa-angle-left"></i> -->
@@ -221,7 +221,7 @@
           </li><br>
           <li class="nav-item has-treeview">
             <a href="{{url('logout')}}" class="nav-link">
-              <i class="nav-icon fas fa-chart-pie"></i>
+              <i class="nav-icon fas fa-sign-out-alt"></i>
               <p>
                 Salir
                 <!-- <i class="right fas fa-angle-left"></i> -->

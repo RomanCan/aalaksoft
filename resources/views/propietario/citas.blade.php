@@ -1,6 +1,11 @@
 @extends('layouts.masterpropietario')
 @section('contenido')
+
 <div id='cita'>
+    <button class="btn btn-primary" @click="prueba()">prueba</button>
+    <div class="d-none">
+    @{{id_session="{!!Session::get('nombre_usuario')!!}"}}
+    </div>
     <div class="container" align="center">
         <h2>Mascota |<small> Citas</small></h2>
         <button class="btn btn-outline-primary btn-block" @click="showModal()">Agregar</button>
@@ -41,9 +46,7 @@
                             <p></p>
                         </div>
                         <div class="modal-body">
-                            <!-- <select class="form-control" v-model="nombre_usuario">
-                                <option v-for="n in propietarios" v-bind:value="n.nombre_usuario">@{{n.nombre}}</option>
-                            </select> -->
+                            
                             <label>Seleccione a su mascota</label>
                             <select class="form-control" v-model="id_mascota">
                                 <option v-for="m in mascotas" v-bind:value="m.id_mascota">@{{m.nombre}}</option>

@@ -44,7 +44,7 @@
 
             </div>
             <!-- fin del col -->
-                <!-- col -->
+            <!-- col -->
             <div class="col-md-6 col-sm-16 col-xs-12 card-body" v-for="u in usuarios">
                 <div class="card-header" style="border: none;">
                     <h3>Informacion Basica</h3>
@@ -228,7 +228,7 @@
                             <div class="col-md-6 col-xs-6">
                             <label>Calle:</label><input type="text" maxlength="3" placeholder="Calle" class="form-control" v-model="calle" onkeypress="return soloNumeros(event);" required>
 
-                            <label>Cruzamientos:</label><input type="text" maxlength="8" placeholder="Cruzamiento" class="form-control" v-model="cruzamiento">
+                            <label>Cruzamientos:</label><input type="text" maxlength="10" placeholder="Cruzamiento" class="form-control" v-model="cruzamiento">
 
                             <label>Localidad:</label><input type="text" maxlength="25" placeholder="Localidad" class="form-control" v-model="localidad" required onkeypress="return soloLetras(event);">
                             </div>

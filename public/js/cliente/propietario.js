@@ -56,7 +56,7 @@ new Vue({
 				this.curp = response.data.curp
 				this.edad = response.data.edad
 				this.celular=response.data.celular
-				// this.sexo = response.data.sexo;
+				this.sexo = response.data.sexo;
 				this.calle = response.data.calle
 				this.cruzamientos = response.data.cruzamientos
 				this.localidad = response.data.localidad
@@ -80,7 +80,7 @@ new Vue({
 				curp:this.curp,
 				edad:this.edad,
 				celular:this.celular,
-				// sexo:this.sexo,
+				sexo:this.sexo,
 				calle:this.calle,
 				cruzamientos:this.cruzamientos,
 				localidad:this.localidad,
@@ -108,7 +108,7 @@ new Vue({
 				this.curp = '';
 				this.edad = '';
 				this.celular='';
-				// this.sexo = response.data.sexo;
+				this.sexo = '';
 				this.calle = '';
 				this.cruzamientos = '';
 				this.localidad ='';
