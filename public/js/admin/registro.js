@@ -1,5 +1,5 @@
 var route= document.querySelector("[name=route]").value;
-var urlRegistros = route+'/apiVenta';
+var urlRegistros = route+'/apiVentas';
 var urlDetalles = route+'/apiDetalle';
 new Vue({
     el:'#registro',

@@ -32,13 +32,15 @@
                 <table class="table table-hover table-sm table-striped table-borderless">
                     <thead class="text-center thead-dark">
                         <th class="align-middle">Folio de la venta</th>
-                        <th class="align-middle">Fecha de venta</th>
+                        <th class="align-middle">Vendedor</th>
+                        <!-- <th class="align-middle">Fecha de venta</th> -->
                         <th class="align-middle">Ingreso total</th>
                     </thead>
                     <tbody>
                         <tr v-for="v in ventas" class="text-center">
                             <td>@{{v.folio}}</td>
-                            <td>@{{v.created_at}}</td>
+                            <td>@{{v.vendedor.nombre}}</td>
+                            <!-- <td>@{{v.created_at}}</td> -->
                             <td>$ @{{v.total}}</td>
                         </tr>
                     </tbody>

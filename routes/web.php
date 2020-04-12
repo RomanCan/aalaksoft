@@ -47,6 +47,7 @@ Route::get('logout','ApiAdministradorController@salir');
 
 //zona de apis
 Route::apiResource('apiVenta','ApiVentaController');
+Route::apiResource('apiVentas','ApiVentasController');
 Route::apiResource('apiDetalle','ApiDetalleVentaController');
 Route::apiResource('apiEmpleado','ApiEmpleadoController');
 Route::apiResource('apiEmpleadoDesactivado','ApiEmpleadoDesactivado');
