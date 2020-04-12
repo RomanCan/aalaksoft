@@ -55,11 +55,13 @@ class ApiAdministradorController extends Controller
             }
 
         };
-
-        if ($usuario==''||$password=='') {
-            
+        if($usuario =='' || $password ==''){
             return Redirect::to('login');
-            
+        }
+        elseif ($usuario && $password != $resp) {
+            return Redirect::to('login');
+        }elseif($usuario && $password != $prop){
+            return Redirect::to('login');
         }
         
     }
