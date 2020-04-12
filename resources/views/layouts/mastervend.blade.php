@@ -219,6 +219,16 @@
               </p>
             </a>
           </li><br>
+          <li class="nav-item has-treeview">
+            <a href="{{url('cita')}}" class="nav-link">
+              <i class="nav-icon fas fa-notes-medical"></i>
+              <p>
+                Citas
+<!--                 <i class="fas fa-angle-left right"></i>
+                <span class="badge badge-info right">6</span> -->
+              </p>
+            </a>
+          </li><br>
 
           <li class="nav-item has-treeview">
             <a href="{{url('logout')}}" class="nav-link">

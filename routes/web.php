@@ -27,6 +27,7 @@ Route::view('registro','administrador.registroventa');
 Route::view('perfilvendedor','vendedores.perfil');
 Route::view('ventas','vendedores.ventas');
 Route::view('registros','vendedores.registros');
+Route::view('cita','vendedores.citas');
 //propietarios
 Route::view('perfilpropietario','propietario.perfil');
 Route::view('mimascota','propietario.perfilmascotas');
@@ -65,6 +66,7 @@ Route::apiResource('apiCliente','ApiClienteController');
 Route::apiResource('apiPropietario','ApiPropietarioController');
 Route::apiResource('apiGenero','ApiGeneroController');
 Route::apiResource('apiCita','ApiCitaController');
+Route::apiResource('apiCitas','ApiCitasController');
 
 
 Route::get('ticket','ApiTicketController@ticket');

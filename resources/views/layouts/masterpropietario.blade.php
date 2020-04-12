@@ -211,7 +211,7 @@
           </li><br>
           <li class="nav-item has-treeview">
             <a href="{{url('citas')}}" class="nav-link">
-              <i class="nav-icon fas fa-copy"></i>
+              <i class="nav-icon fas fa-notes-medical"></i>
               <p>
                 Citas
 <!--                 <i class="fas fa-angle-left right"></i>
