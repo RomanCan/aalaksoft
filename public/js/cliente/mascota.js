@@ -114,13 +114,25 @@ new Vue({
 			this.$http.post(urlMascota,data,config)
 			.then(function(response){
 				
-				alert('exitoso');
 				$('#datos').modal('hide');
+				Swal.fire({
+					position: 'center',
+					type: 'success',
+					title: 'Guardado exitosamente',
+					showConfirmButton: false,
+					timer: 1500
+				  })
 				this.getDatos();
 
 				// window.location.reload();
 
 			}).catch(function(response){
+				Swal.fire({
+					position: 'center',
+					type: 'error',
+					title: 'Ha ocurrido un error',
+					text: 'verifique sus datos',
+				})
 				console.log(response);
 			});
 
@@ -161,7 +173,25 @@ new Vue({
 			this.$http.patch(urlMascota + '/' + this.auxId,mascota)
 			.then(function(json){
 				this.nombre_usuario='';
-				// this.id_mascota='';
+				$('#datos').modal('hide');
+				Swal.fire({
+					position: 'center',
+					type: 'success',
+					title: 'Guardado exitosamente',
+					showConfirmButton: false,
+					timer: 1500
+				  })
+				
+				this.getDatos();
+				
+			}).catch(function(json){
+				Swal.fire({
+					position: 'center',
+					type: 'error',
+					title: 'Ha ocurrido un error',
+					text: 'verifique sus datos',
+				})
+			});
 				this.nombre='';
 				this.id_genero='';
 				this.raza='';
@@ -171,9 +201,6 @@ new Vue({
 				this.color='';
 				this.observaciones='';
 				this.foto='';
-				this.getDatos();
-				$('#datos').modal('hide');
-			});
 			this.editando=false;
 		},
 		efoto:function(id){
@@ -196,13 +223,26 @@ new Vue({
 			this.$http.post(urlFoto,data,config)
 			.then(function(json){
 				console.log(json);
-				alert('Foto agregada con éxito');
-				this.getDatos();
 				$('#datos').modal('hide');
+				Swal.fire({
+					position: 'center',
+					type: 'success',
+					title: 'Guardado exitosamente',
+					showConfirmButton: false,
+					timer: 1500
+				  })
+				this.getDatos();
+				
 				//Recarga la página window.location.reload();
 				window.location.reload();
 			})
 			.catch(function(json){
+				Swal.fire({
+					position: 'center',
+					type: 'error',
+					title: 'Ha ocurrido un error',
+					text: 'verifique sus datos',
+				})
 				console.log(json)
 			})
 

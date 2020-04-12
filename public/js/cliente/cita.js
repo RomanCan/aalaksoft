@@ -118,15 +118,5 @@ new Vue({
                   this.descripcion='';
                   this.fecha_cita='';
           },
-          prueba:function(){
-            Swal.fire({
-              position: 'center',
-              type: 'success',
-              title: 'Guardado exitosamente',
-              showConfirmButton: false,
-              timer: 1500
-            })
-          }
-
       },
 })

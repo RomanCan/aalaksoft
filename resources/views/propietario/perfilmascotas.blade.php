@@ -78,7 +78,7 @@
 					                  <option disabled="Seleccione una opcion"></option>
 					                  <option v-for="esp in especie" v-bind:value="esp.id_especie">@{{esp.tipo}}</option>
 					                </select >
-					                <label>Fecha:</label><input type="date" placeholder="Fecha_nacimiento" class="form-control" v-model="fecha_nac">
+					                <label>Fecha de nacimiento:</label><input type="date" placeholder="Fecha_nacimiento" class="form-control" v-model="fecha_nac">
 					                <label>Observaciones:</label><input type="text" placeholder="Observaciones" class="form-control" v-model="observaciones">
 								</div>
 							
@@ -122,8 +122,8 @@
 							<label>Foto de la mascota</label><input type="file" class="form-control" @change="alSeleccionar" accept="image/jpeg" maxlength="1024">
 						</div>
 						<div class="modal-footer">
-							<button type="button" class="btn btn-outline-danger" data-dismiss="modal" @click="salir">	Cancelar</button>
-							<button class="btn btn-outline-info" @click="actualizarF()">Foto</button>
+							<button type="button" class="btn btn-outline-danger" data-dismiss="modal" @click="salir">Cancelar</button>
+							<button class="btn btn-outline-info" @click="actualizarF()">Actualizar Foto</button>
 							<p></p>
 							
 							<!-- <button class="btn btn-primary btn-block" @click="cargarFoto()">Guardar foto</button> -->

@@ -2,17 +2,16 @@
 @section('contenido')
 
 <div id='cita'>
-    <button class="btn btn-primary" @click="prueba()">prueba</button>
     <div class="d-none">
     @{{id_session="{!!Session::get('nombre_usuario')!!}"}}
     </div>
     <div class="container" align="center">
-        <h2>Mascota |<small> Citas</small></h2>
-        <button class="btn btn-outline-primary btn-block" @click="showModal()">Agregar</button>
+        <h2>Mascota |<small> Citas</small></h2><br>
+        <button class="btn btn-outline-primary btn-block" @click="showModal()">Agregar</button><br>
         <div class="table-responsive row">
             <div class="col-md-10 col-xs-12">
-                <table class="table table-striped" align="center">
-                    <thead>
+                <table class="table table-striped table-borderless table-hover" align="center">
+                    <thead class="thead-dark">
                        <th>Propietario</th>
                        <th>Mascota</th>
                        <th>Descripcion</th>
@@ -52,8 +51,8 @@
                                 <option v-for="m in mascotas" v-bind:value="m.id_mascota">@{{m.nombre}}</option>
                             </select>
                             <label >Descripcion</label>
-                            <input class="form-control" type="text" placeholder="Descripcion" v-model="descripcion">
-                            <input class="form-control" type="date" placeholder="Fecha" v-model="fecha_cita">
+                            <input class="form-control" type="text" placeholder="Razon de la cita" v-model="descripcion">
+                            <input class="form-control" type="date" placeholder="Fecha de la cita" v-model="fecha_cita">
                             
                         </div>
                         <div class="modal-footer">
