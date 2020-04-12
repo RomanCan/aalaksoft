@@ -32,7 +32,8 @@ class ApiAdministradorController extends Controller
     		if($resp[0]->rol->rol == "Administrador")
     			return Redirect::to('perfil');
     		elseif ($resp[0]->rol->rol =="Vendedor") 
-    			return Redirect::to('perfilvendedor');
+                return Redirect::to('perfilvendedor');
+                
     	}else{
             
             $usuario = $request->usuario;
@@ -41,8 +42,6 @@ class ApiAdministradorController extends Controller
             $prop = Propietario::where('nombre_usuario','=',$usuario)
             ->where('password','=',$password)
             ->get();
-
-           
 
             if(count($prop)>0)
             {
@@ -54,6 +53,13 @@ class ApiAdministradorController extends Controller
                 if($prop[0]->rol->rol=="Cliente")
                     return Redirect::to('perfilpropietario');
             }
+
+        };
+
+        if ($usuario==''||$password=='') {
+            
+            return Redirect::to('login');
+            
         }
         
     }

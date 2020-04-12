@@ -18,7 +18,7 @@
           <p class="help-block">Escribe tú contraseña</p>
         </div>
         <div class="form-group text-center">
-          <button type="submit" class="btn btn-danger btn-block">LOGIN</button>
+          <input type="submit" value="Login" class="btn btn-danger btn-block">
         </div>
       </form>   
     </div>

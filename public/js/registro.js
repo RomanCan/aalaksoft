@@ -30,24 +30,31 @@ new Vue({
 			};
 			this.$http.post(urlP,u)
 			.then(function(json){
-				console.log(json);
+				// console.log(json);
 				$('#add_u').modal('hide');
-        Swal.fire({
-          position: 'center',
-          type: 'success',
-          title: 'Guardado exitosamente',
-          showConfirmButton: false,
-          timer: 1500
-        })
-			}).catch(function(json){
-				console.log(json);
-			});
-				// this.id_rol='';
-   				this.nombre_usuario='';
+				Swal.fire({
+				position: 'center',
+				type: 'success',
+				title: 'Guardado exitosamente',
+				showConfirmButton: false,
+				timer: 1500
+				})
+				this.nombre_usuario='';
    				this.password='';
    				this.nombre='';
    				this.apellidop='';
    				this.apellidom='';
+			}).catch(function(json){
+				Swal.fire({
+					position: 'center',
+					type: 'error',
+					title: 'Ha ocurrido un error',
+					text: 'verifique sus datos',
+				})
+				// console.log(json);
+			});
+				// this.id_rol='';
+   				
    				
 		},
 		salir:function(){
