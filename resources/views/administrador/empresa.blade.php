@@ -8,7 +8,7 @@
 	<!-- inicio del row -->
 	<div class="row">
 		<div class="col-md-8 col-sm-12 col-xs-12" v-for="empresax in empresa">
-			<label>Opcion: </label><span class="btn btn-outline-primary" @click="editDatos(empresax.id_empresa)"><i class="">Editar</i></span>
+			<label>Opción: </label> <span class="btn btn-outline-primary" @click="editDatos(empresax.id_empresa)"><i class="">Editar</i></span>
 			<div class="form-group">
                 <label style="float:left">RFC de la empresa.</label>
         	    <div class="input-group">
@@ -28,7 +28,7 @@
                 </div>
             </div>
 			<div class="form-group">
-                <label style="float:left">Direccion.</label>
+                <label style="float:left">Dirección.</label>
         	    <div class="input-group">
                     <div class="input-group-prepend">
                         <span class="input-group-text"><i class="fas fa-address-card"></i></span>
@@ -37,7 +37,7 @@
                 </div>
             </div>
 			<div class="form-group">
-                <label style="float:left">Telefono.</label>
+                <label style="float:left">Teléfono.</label>
         	    <div class="input-group">
                     <div class="input-group-prepend">
                         <span class="input-group-text"><i class="fas fa-phone"></i></span>
@@ -76,7 +76,7 @@
 
 		<div class="col-md-4 col-sm-12 col-xs-12" v-for="empresax in empresa">
 
-			<label>Opcion: </label><span class="btn btn-outline-info" @click="editF(empresax.id_empresa)"><i class="">Editar Foto</i></span>
+			<label>Opción:</label> <span class="btn btn-outline-info" @click="editF(empresax.id_empresa)"><i class="">Editar Foto</i></span>
 			<div class="form-group">
                 <label style="float:left">Logo de la empresa.</label>
         	    <div class="input-group">
@@ -105,7 +105,7 @@
 						<div class="col-md-6 col-sm-6 col-xs-12">
 							<label>RFC:</label><input type="text" maxlength="13" placeholder="RFC" class="form-control" v-model="rfc" maxlength="13"> 
 							<label>Nombre:</label><input type="text" maxlength="120" placeholder="Nombre" class="form-control" v-model="nombre_empresa">
-							<label>Direccion:</label><input type="text" placeholder="Dirección" class="form-control" v-model="direccion">
+							<label>Dirección:</label><input type="text" placeholder="Dirección" class="form-control" v-model="direccion">
 							<label>Representante:</label><input type="text" maxlength="40" placeholder="Representante legal" class="form-control" v-model="representante_legal">
 							
 						</div>

@@ -137,7 +137,7 @@ new Vue({
 					position: 'center',
 					type: 'error',
 					title: 'Ha ocurrido un error',
-					text: 'verifique sus datos',
+					text: 'Verifique sus datos',
 				  })
 			});
 			this.editar=false;
@@ -163,13 +163,13 @@ new Vue({
 				// $('#e').modal('show');
 			});
 			Swal.fire({
-			  title: "¿Desea Desactivarlo?",
+			  title: "¿Desea desactivarlo?",
 			  type: 'warning',
 			  showCancelButton: true,
 			  confirmButtonColor: '#3085d6',
 			  cancelButtonColor: '#d33',
-			  confirmButtonText: 'Si,Desactivar',
-			  cancelButtonText:'No,Cancelar',
+			  confirmButtonText: 'Sí, desactivar',
+			  cancelButtonText:'No, cancelar',
 			}).then((result) => {
 			  if (result.value) {
 			  	var a ={
@@ -236,13 +236,13 @@ new Vue({
 				// $('#e').modal('show');
 			});
 			Swal.fire({
-			  title: "¿Desea Activarlo?",
+			  title: "¿Desea activarlo?",
 			  type: 'warning',
 			  showCancelButton: true,
 			  confirmButtonColor: '#3085d6',
 			  cancelButtonColor: '#d33',
-			  confirmButtonText: 'Si,Activar',
-			  cancelButtonText:'No,Cancelar',
+			  confirmButtonText: 'Si, activar',
+			  cancelButtonText:'No, cancelar',
 			}).then((result) => {
 			  if (result.value) {
 			  	var b ={
@@ -276,7 +276,7 @@ new Vue({
 						position: 'center',
 						type: 'error',
 						title: 'Ha ocurrido un error',
-						text: 'verifique sus datos',
+						text: 'Verifique sus datos',
 					  })
 			  		console.log(json);
 			  	})

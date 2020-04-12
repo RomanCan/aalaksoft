@@ -65,8 +65,8 @@
 					<div class="modal-content" >
 						<div class="modal-header" style="background: #2387FF">
 							
-							<h4 class="modal-title" style="color: #fff" v-if="editando">Editar Datos</h4>
-							<h4 class="modal-title" style="color: #fff" v-if="!editando">Agregar Mascota</h4>
+							<h4 class="modal-title" style="color: #fff" v-if="editando">Editar datos</h4>
+							<h4 class="modal-title" style="color: #fff" v-if="!editando">Agregar mascota</h4>
 							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" v-on:click="salir">x</span></button>
 							<p></p>
 						</div>
@@ -83,7 +83,7 @@
 								</div>
 							
 								<div class="col-md-6">
-									<label>Seleccione el genero:</label><select class="form-control" v-model="id_genero">
+									<label>Seleccione el género:</label><select class="form-control" v-model="id_genero">
 					                  <option disabled="Seleccione una opcion"></option>
 					                  <option v-for="gen in genero" v-bind:value="gen.id_genero">@{{gen.nombre}}</option>
 					                </select >
@@ -94,8 +94,9 @@
 							<!-- <input type="file" class="form-control" @change="alSeleccionar" accept="image/jpeg" maxlength="1024"> -->
 						</div>
 						<div class="modal-footer">
-							<button type="button" class="btn btn-outline-danger" data-dismiss="modal" @click="salir">Cancelar</button>
 							<button type="submit" class="btn btn-outline-primary" @click="agregarMascota()" v-if="!editando">Guardar</button>
+							<button type="button" class="btn btn-outline-danger" data-dismiss="modal" @click="salir">Cancelar</button>
+							
 							<button type="submit" class="btn btn-outline-info" @click="actualizarDatos()" v-if="editando">Actualizar</button>
 							<!-- <button class="btn btn-primary" @click="actualizarM()">Foto</button> -->
 							<p></p>
@@ -122,8 +123,9 @@
 							<label>Foto de la mascota</label><input type="file" class="form-control" @change="alSeleccionar" accept="image/jpeg" maxlength="1024">
 						</div>
 						<div class="modal-footer">
-							<button type="button" class="btn btn-outline-danger" data-dismiss="modal" @click="salir">Cancelar</button>
 							<button class="btn btn-outline-info" @click="actualizarF()">Actualizar Foto</button>
+							<button type="button" class="btn btn-outline-danger" data-dismiss="modal" @click="salir">Cancelar</button>
+							
 							<p></p>
 							
 							<!-- <button class="btn btn-primary btn-block" @click="cargarFoto()">Guardar foto</button> -->

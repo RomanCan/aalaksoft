@@ -13,13 +13,13 @@
     <div class="row" align="center">
         <div class="col-md-12 col-xs-2" align="left" v-for="pro in propietario">
           <br> 
-          <label>Opcion:</label>
+          <label>Opción:</label>
           <span class="btn btn-outline-success" @click='editarPropietario(pro.nombre_usuario)'><i class="fas fa-edit"></i></span><hr>
         </div>
         <!-- col -->
         <div class="col-md-6 col-sm-16 col-xs-12 card-body" v-for="pro in propietario">
             <div class="card-header" style="border: none;">
-              <h3>Informacion de la sesion</h3>
+              <h3>Información de la sesión</h3>
             </div>
 
             <div class="form-group">
@@ -48,7 +48,7 @@
             <!-- col -->
             <div class="col-md-6 col-sm-16 col-xs-12 card-body" v-for="pro in propietario">
                   <div class="card-header" style="border: none;">
-                      <h3>Informacion Basica</h3>
+                      <h3>Información básica</h3>
                   </div>
 
                   <div class="form-group">
@@ -76,7 +76,7 @@
         <!-- inicio del row  -->
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12 card-header" style="border: none;">
-                <h3>Informacion general</h3>
+                <h3>Información general</h3>
             </div>
             <!-- col       -->
             <div class="col-md-6 col-sm-16 col-xs-12 card-body" v-for="pro in propietario">
@@ -148,7 +148,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label style="float:left">Curp.</label>
+                    <label style="float:left">CURP.</label>
                     <div class="input-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fas fa-text-width"></i></span>
@@ -158,7 +158,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label style="float:left">Telefono.</label>
+                    <label style="float:left">Teléfono.</label>
                     <div class="input-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fas fa-phone-alt"></i></span>
@@ -189,7 +189,7 @@
                   <div class="col-md-6 col-xs-6">
                     <label>Nombre de usuario:</label><input type="text" maxlength="15" placeholder="Nombre de Usuario" class="form-control" v-model="nombre_usuario" required onkeypress="return soloLetras(event);">
                     <label>Contraseña:</label><input type="text" maxlength="15" placeholder="Contraseña" class="form-control" v-model="password">
-                    <label>Curp:</label><input type="text" placeholder="CURP" class="form-control" v-model="curp" maxlength="18">
+                    <label>CURP:</label><input type="text" placeholder="CURP" class="form-control" v-model="curp" maxlength="18">
                   </div>
                   <!-- fin col -->
                   <!-- col -->
@@ -206,7 +206,7 @@
                   <div class="col-md-6 col-xs-6">
                     <label>Edad:</label><input type="text" maxlength="2" placeholder="Edad" class="form-control" v-model="edad" onkeypress="return soloNumeros(event);" required>
                     <label>Sexo: (F o M)</label><input type="text" placeholder="Sexo" class="form-control" v-model="sexo" required onkeypress="return soloLetras(event);" maxlength="1">
-                    <label>Celular:</label><input type="text" maxlength="10" placeholder="Celular" class="form-control" v-model="celular" onkeypress="return soloNumeros(event);" required>
+                    <label>Teléfono:</label><input type="text" maxlength="10" placeholder="Celular" class="form-control" v-model="celular" onkeypress="return soloNumeros(event);" required>
                     
                   </div>
                   <div class="col-md-6 col-xs-6">

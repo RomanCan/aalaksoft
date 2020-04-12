@@ -26,12 +26,12 @@
 			<div class="col-md-7 col-sm-8 col-xs-12  table-responsive-sm">
 				<table class="table table-borderless table-sm table-hover" style="margin:5px 10px">
 					<thead class="thead-dark">
-						<th>Codigo</th>
+						<th>Código</th>
 						<th>Nombre</th>
 						<th>Precio</th>
 						<th>Cantidad</th>
 						<th>Total</th>
-						<th>Accion</th>
+						<th>Acción</th>
 					</thead>
 					<tbody>
 						<tr v-for="(v,index) in ventas" align="center">

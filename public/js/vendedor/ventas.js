@@ -43,7 +43,7 @@ function init(){
 							position: 'center',
 							type: 'error',
 							title: 'Ha ocurrido un error',
-							text: 'Ingrese solo el codigo',
+							text: 'Ingrese sólo el código',
 						})
 					}
 					this.codigo = '';
@@ -53,13 +53,13 @@ function init(){
 
 			eliminarProducto:function(id){
 				Swal.fire({
-					title: "¿Estas seguro?",
+					title: "¿Estás seguro?",
 					type: 'warning',
 					showCancelButton: true,
 					confirmButtonColor: '#3085d6',
 					cancelButtonColor: '#d33',
-					confirmButtonText: 'Si, Continuar',
-					cancelButtonText:'No, Cancelar',
+					confirmButtonText: 'Sí, continuar',
+					cancelButtonText:'No, cancelar',
 				}).then((result) => {
 					if (result.value) {
 						this.ventas.splice(id,1);
@@ -82,13 +82,13 @@ function init(){
 			},
 			vender:function(){
 				Swal.fire({
-					title: "¿Estas seguro?",
+					title: "¿Estás seguro?",
 					type: 'warning',
 					showCancelButton: true,
 					confirmButtonColor: '#3085d6',
 					cancelButtonColor: '#d33',
-					confirmButtonText: 'Si, Continuar',
-					cancelButtonText:'No, Cancelar',
+					confirmButtonText: 'Sí, continuar',
+					cancelButtonText:'No, cancelar',
 				}).then((result) => {
 					if (result.value) {
 						if(this.ventas.value){
@@ -118,7 +118,7 @@ function init(){
 									position: 'center',
 									type: 'error',
 									title: 'Ha ocurrido un error',
-									text: 'verifique sus datos',
+									text: 'Verifique sus datos',
 								})
 								console.log(a.data);
 							});
@@ -129,7 +129,7 @@ function init(){
 								position: 'center',
 								type: 'error',
 								title: 'Ha ocurrido un error',
-								text: 'No ha agregado articulos',
+								text: 'No ha agregado artículos',
 							})
 						}
 					}

@@ -123,7 +123,7 @@
                     <div class="col-md-6 col-sm-12 col-xs-12">
                         <div class="customer_say" id='empresa' v-for="empresax in empresa">
                         	<br><br><br><br><br>
-                            <h3>Ubicanos en: <br></h3>
+                            <h3>Ubícanos en: <br></h3>
                             <p class="text">{{Session::get('dir')}}</p>
                         </div>
                     </div>
@@ -209,8 +209,8 @@
                     
                     <div class="text">
                         <h2>Citas</h2>
-                        <p>Para poder realizar una cita devera iniciar sesion</p>
-                        <p>Si aun no esta registrado de click en <a href="{{url('login')}}">Iniciar Sesion/Registrate</a></p>
+                        <p>Para poder realizar una cita deberá iniciar sesión</p>
+                        <p>Si aún no está registrado de clíck en <a href="{{url('login')}}">Iniciar Sesión/Regístrate</a></p>
                     </div>
                     <div class="" >
                         <div class="form_area">
@@ -218,10 +218,10 @@
                                 <div class="input_area" align="justify">
                                     <input type="text" name="" placeholder="Nombre de usuario">
                                     <input type="text" name="" placeholder="Mascota">
-                                    <input type="email" name="" placeholder="Correo electronico">
-                                    <input type="text" name="" placeholder="Telefono">
+                                    <input type="email" name="" placeholder="Correo electrónico">
+                                    <input type="text" name="" placeholder="Teléfono">
                                 </div>
-                                <textarea name="" placeholder="Message"></textarea>
+                                <textarea name="" placeholder="Mensaje"></textarea>
                                         <!-- <label><p><input type="checkbox">subscribe to the newsletter</p></label> -->
                                         <!-- <input type="submit" value="SEND"> -->
                             </form>

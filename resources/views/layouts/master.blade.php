@@ -41,9 +41,9 @@
                     <div class="col-md-8 col-sm-9 col-xs-10">
                         <div class="menu">
                             <ul class="nav navbar-nav h4">
-                                <li><a href="{{url('/')}}">Home</a></li>
+                                <li><a href="{{url('/')}}">Inicio</a></li>
                                 <li><a href="#citas">Citas</a></li>
-                                <li><a href="{{url('login')}}">Iniciar Sesion/Registrate</a></li>
+                                <li><a href="{{url('login')}}">Iniciar Sesión/Regístrate</a></li>
                                 <!-- <li><a href="{{url('registrar')}}">Registrarte</li> -->
 								<!-- <a href="{{url('registrar')}}"><span class="icon-edit t"></span>Registrarse</a> -->
                                 
@@ -82,7 +82,7 @@
                         </div>
                         <div class="footer_first_menu">
                             <ul>
-                                <li><a>Politicas de Privacidad</a></li>
+                                <li><a>Políticas de Privacidad</a></li>
                                 <li><a>Correo:</a></li>
                                 <li><a>Colitas.felices@gmail.com</a></li>
                             </ul>
@@ -93,9 +93,9 @@
                             <div class="row">
                                 <div class="col-md-12 col-sm-12">
                                     <ul style="vertical-align: middle;">
-                                        <li class="active"><a href="{{url('/')}}">Home</a></li>
+                                        <li class="active"><a href="{{url('/')}}">Inicio</a></li>
                                         <li><a href="#citas">Citas</a></li>
-                                        <li><a href="{{url('login')}}">Iniciar Sesion/Registrate</a></li>
+                                        <li><a href="{{url('login')}}">Iniciar Sesión/Regístrate</a></li>
                                     </ul>
                                 </div>
                             </div>

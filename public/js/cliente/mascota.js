@@ -131,7 +131,7 @@ new Vue({
 					position: 'center',
 					type: 'error',
 					title: 'Ha ocurrido un error',
-					text: 'verifique sus datos',
+					text: 'Verifique sus datos',
 				})
 				console.log(response);
 			});
@@ -189,7 +189,7 @@ new Vue({
 					position: 'center',
 					type: 'error',
 					title: 'Ha ocurrido un error',
-					text: 'verifique sus datos',
+					text: 'Verifique sus datos',
 				})
 			});
 				this.nombre='';
@@ -241,7 +241,7 @@ new Vue({
 					position: 'center',
 					type: 'error',
 					title: 'Ha ocurrido un error',
-					text: 'verifique sus datos',
+					text: 'Verifique sus datos',
 				})
 				console.log(json)
 			})

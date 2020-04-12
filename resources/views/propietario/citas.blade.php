@@ -14,9 +14,9 @@
                     <thead class="thead-dark">
                        <th>Propietario</th>
                        <th>Mascota</th>
-                       <th>Descripcion</th>
+                       <th>Descripción</th>
                        <th>Fecha de la cita</th>
-                       <th>Opcion</th>
+                       <th>Opción</th>
                     </thead>
                     <tbody>
                         <tr v-for="(c,index) in citas">
@@ -39,7 +39,7 @@
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header" style="background: #2387FF; color: #fff">
-                           <h4 class="modal-title" v-if="!editar">Agregar Nuevo</h4>
+                           <h4 class="modal-title" v-if="!editar">Agregar nuevo</h4>
                            <h4 class="modal-title" v-if="editar">Editar</h4>
                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" @click="">x</span></button>
                             <p></p>
@@ -50,8 +50,8 @@
                             <select class="form-control" v-model="id_mascota">
                                 <option v-for="m in mascotas" v-bind:value="m.id_mascota">@{{m.nombre}}</option>
                             </select>
-                            <label >Descripcion</label>
-                            <input class="form-control" type="text" placeholder="Razon de la cita" v-model="descripcion">
+                            <label >Descripción</label>
+                            <input class="form-control" type="text" placeholder="Razón de la cita" v-model="descripcion"><br>
                             <input class="form-control" type="date" placeholder="Fecha de la cita" v-model="fecha_cita">
                             
                         </div>

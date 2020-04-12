@@ -9,7 +9,7 @@
                     <th>Propietario</th>
                     <th>Mascota</th>
                     <th>Fecha de cita</th>
-                    <th>Descripcion</th>
+                    <th>Descripción</th>
                 </thead>
                 <tbody>
                     <tr v-for="c in citas">

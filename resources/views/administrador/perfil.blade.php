@@ -14,13 +14,13 @@
         <div class="row">
             <div class="col-md-12 col-xs-2" align="left" v-for="u in usuarios">
                 <br> 
-                <label>Opcion:</label>
+                <label>Opción:</label>
                 <span class="btn btn-outline-success" @click='editarUsuario(u.id_usuario)'><i class=""></i>Editar</span>
             </div>
             <!-- col       -->
             <div class="col-md-6 col-sm-16 col-xs-12 card-body" v-for="u in usuarios">
                 <div class="card-header" style="border: none;">
-                    <h3>Informacion de la sesion</h3>
+                    <h3>Información de la sesión</h3>
                 </div>
 
                 <div class="form-group">
@@ -47,7 +47,7 @@
             <!-- col -->
             <div class="col-md-6 col-sm-16 col-xs-12 card-body" v-for="u in usuarios">
                 <div class="card-header" style="border: none;">
-                    <h3>Informacion Basica</h3>
+                    <h3>Información básica</h3>
                 </div>
 
                 <div class="form-group">
@@ -81,7 +81,7 @@
         <!-- inicio del row  -->
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12 card-header" style="border: none;">
-                <h3>Informacion general</h3>
+                <h3>Información general</h3>
             </div>
             <!-- col       -->
             <div class="col-md-6 col-sm-16 col-xs-12 card-body" v-for="u in usuarios">
@@ -153,7 +153,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label style="float:left">Curp.</label>
+                    <label style="float:left">CURP.</label>
                     <div class="input-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fas fa-text-width"></i></span>
@@ -163,7 +163,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label style="float:left">Telefono.</label>
+                    <label style="float:left">Teléfono.</label>
                     <div class="input-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fas fa-phone-alt"></i></span>
@@ -198,7 +198,7 @@
 
                             <label>Contraseña:</label><input type="text" maxlength="15" placeholder="Contraseña" class="form-control" v-model="password">
 
-                            <label>Curp:</label><input type="text" placeholder="CURP" class="form-control" v-model="curp" maxlength="18">
+                            <label>CURP:</label><input type="text" placeholder="CURP" class="form-control" v-model="curp" maxlength="18">
                             
                             </div>
                             <!-- fin del col -->

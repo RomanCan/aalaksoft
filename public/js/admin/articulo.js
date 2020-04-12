@@ -76,48 +76,43 @@ new Vue({
 		},
 
 		actualizarArticulo:function(){
-			var art={
-				id_articulo:this.id_articulo,
-				nombre:this.nombre,
-				costo:this.costo,
-				cantidad:this.cantidad,
-				id_tipo:this.id_tipo
-			};
-			this.$http.patch(urlallart + '/' + this.articuloid,art)
-			.then(function(response){
-				this.getArticulos();
-				// console.log(response);
-			}).catch(function(response){
-
-			});
-			this.editar=false;
-			// $('#add_articulo').modal('hide');
-			Swal.fire({
-				  position: 'center',
-				  type: 'success',
-				  title: 'Guardado exitosamente',
-				  showConfirmButton: false,
-				  timer: 1500
-				})
-			this.nombre='';
-			this.costo='';
-			this.cantidad='';
-			this.id_tipo='';
-			$('#add_articulo').modal('hide');
+				var art={
+					nombre:this.nombre,
+					costo:this.costo,
+					cantidad:this.cantidad,
+					id_tipo:this.id_tipo
+				};
+				this.$http.patch(urlallart + '/' + this.articuloid,art)
+				.then(function(response){
+					$('#add_articulo').modal('hide');
+					Swal.fire({
+						position: 'center',
+						type: 'success',
+						title: 'Guardado exitosamente',
+						showConfirmButton: false,
+						timer: 1500
+					  })
+					  window.location.reload();
+					this.editar=false;
+				}).catch(function(response){
+					Swal.fire({
+						position: 'center',
+						type: 'error',
+						title: 'Ha ocurrido un error',
+						text: 'No deje campos vacios',
+					})
+				});
 		},
 
 		agregarArticulo:function(id){
 			var articulo={
-				// id_articulo:this.id_articulo,
+				
 				nombre:this.nombre,
 				costo:this.costo,
 				cantidad:this.cantidad,
 				id_tipo:this.id_tipo
 			};
-			this.nombre='';
-			this.costo='';
-			this.cantidad='';
-			this.id_tipo='';
+			
 
 			//para poder guardar se necesita del metodo post
 			this.$http.post(urlallart,articulo)
@@ -131,20 +126,30 @@ new Vue({
 				  showConfirmButton: false,
 				  timer: 1500
 				})
+				this.nombre='';
+				this.costo='';
+				this.cantidad='';
+				this.id_tipo='';
 
-
-				this.getArticulos();
+				window.location.reload();
+			}).catch(function(response){
+				Swal.fire({
+					position: 'center',
+					type: 'error',
+					title: 'Ha ocurrido un error',
+					text: 'No deje campos vacíos',
+				})
 			});
 		},
 		eliminarArticulo:function(id){
 			Swal.fire({
-				title: "No podras revertir este cambio!,¿Estas seguro?",
+				title: "No podrás revertir este cambio!,¿Estás seguro?",
 				type: 'warning',
 				showCancelButton: true,
 				confirmButtonColor: '#3085d6',
 				cancelButtonColor: '#d33',
-				confirmButtonText: 'Si,borralo',
-				cancelButtonText:'No,cancelar',
+				confirmButtonText: 'Sí, bórralo',
+				cancelButtonText:'No, cancelar',
 			}).then((result) => {
 			  	if (result.value) {
 					this.$http.delete(urlallart +'/'+id).then(response=>{
@@ -160,14 +165,12 @@ new Vue({
 							position: 'center',
 							type: 'error',
 							title: 'Ha ocurrido un error',
-							text: 'verifique sus datos',
+							text: 'No puede eliminarse, está en tus registros',
 						})
-						console.log(json);
+						
 					})
 			  	}
 			})
-
-
 		},
 		salir:function(){
 			this.editar=false;

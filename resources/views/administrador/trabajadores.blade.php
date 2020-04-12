@@ -125,8 +125,8 @@
 			<div class="modal-content">
 				<div class="modal-header" style="background: #2387FF">
 					
-					<h4 class="modal-tittle" v-if="!editar" style="color: #fff">Empleado Nuevo</h4>
-					<h4 class="modal-tittle" v-if="editar" style="color: #fff">Actualizar Empleado</h4>
+					<h4 class="modal-tittle" v-if="!editar" style="color: #fff">Empleado nuevo</h4>
+					<h4 class="modal-tittle" v-if="editar" style="color: #fff">Actualizar empleado</h4>
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" @click="salir">x</span></button>
 				</div>
 				<div class="modal-body">
@@ -143,7 +143,7 @@
 							<label v-if="!editar">Contraseña</label><input v-if="!editar" maxlength="15" type="text" placeholder="Contraseña" class="form-control" v-model="password">
 							<label>Edad:</label><input type="text" maxlength="2" placeholder="Edad" class="form-control" v-model="edad" onkeypress="return soloNumeros(event);" required>
 							
-							<label>Telefono:</label><input type="text" maxlength="10" placeholder="Celular" class="form-control" v-model="telefono" onkeypress="return soloNumeros(event);" required>
+							<label>Teléfono:</label><input type="text" maxlength="10" placeholder="Celular" class="form-control" v-model="telefono" onkeypress="return soloNumeros(event);" required>
 							<label>Municipio:</label><input type="text" maxlength="30" placeholder="Municipio" class="form-control" v-model="municipio" required onkeypress="return soloLetras(event);">
 							<!-- <label>Curp:</label><input type="text" maxlength="18" placeholder="CURP" class="form-control" v-model="curp"> -->
 						</div>

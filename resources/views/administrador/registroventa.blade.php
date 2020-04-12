@@ -11,9 +11,9 @@
                 <table class="table table-hover table-sm table-striped table-borderless" >
                     <thead class="text-center thead-dark">
                         <th class="align-middle">Folio de la venta</th>
-                        <th class="align-middle">Nombre del articulo</th>
-                        <th class="align-middle">Articulos vendidos</th>
-                        <th class="align-middle">Precio de articulo(Pz)</th>
+                        <th class="align-middle">Artículo/Servicio</th>
+                        <th class="align-middle">Artículos vendidos</th>
+                        <th class="align-middle">Precio de artículo(Pz)</th>
                     </thead>
                     <tbody>
                         <tr v-for="d in detalles" class="text-center">

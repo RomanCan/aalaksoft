@@ -88,8 +88,8 @@
             <div class="modal-content">
               <div class="modal-header" style="background: #2387FF; color: #fff">
                
-                <h4 class="modal-title" v-if="editar" >Editar Articulos</h4>
-                 <h4 class="modal-title" v-if="!editar">Guardar Articulo</h4>
+                <h4 class="modal-title" v-if="editar" >Editar Artículo</h4>
+                 <h4 class="modal-title" v-if="!editar">Guardar Artículo</h4>
                  <button type="button" class="close" data-dismiss="modal" aria-label="close"><span aria-hidden="true" @click="salir">x</span></button>
               </div>
               <div class="modal-body" align="center">
@@ -99,7 +99,7 @@
                     <label>Costo ($):</label><input type="text" placeholder="Costo" v-model="costo" class="form-control" maxlength="4" onkeypress="return soloNumeros(event);" required>
                   </div>
                   <div class="col-md-6 col-sm-6 col-xs-6">
-                    <label>Cantidad de articulos:</label><input type="text" placeholder="Cantidad" v-model="cantidad" class="form-control" maxlength="4" onkeypress="return soloNumeros(event);" required>
+                    <label>Cantidad de artículos:</label><input type="text" placeholder="Cantidad" v-model="cantidad" class="form-control" maxlength="4" onkeypress="return soloNumeros(event);" required>
                     <label>Producto/Servicio</label><select class="form-control" v-model="id_tipo">
                       <!-- <option selected="Seleccione una opcion"></option> -->
                       <option v-for="t in tipos" v-bind:value="t.id_tipo">@{{t.nombre}}</option>
