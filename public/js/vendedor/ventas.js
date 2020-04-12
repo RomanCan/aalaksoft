@@ -91,39 +91,47 @@ function init(){
 					cancelButtonText:'No, Cancelar',
 				}).then((result) => {
 					if (result.value) {
-					
-						var det= [];
-						for (var i =0; i < this.ventas.length; i++) {
-							det.push({
-								id_articulo:this.ventas[i].id_articulo,
-								// nombre:this.ventas[i].nombre,
-								precio:this.ventas[i].costo,
-								cantidad:this.cantidades[i],
-								total:this.ventas[i].costo * this.cantidades[i]
-							})
-						}
-						var ven = {
-							folio:this.folio,
-							id_usuario:this.id_session,
-							total:this.tot,
-							detalles: det
-						}
-						console.log(ven);
-		
-						this.$http.post(urlventa,ven)
-						.then(function(json){
-							console.log(json.data);
-						}).catch(function(a){
+						if(this.ventas.value){
+							var det= [];
+							for (var i =0; i < this.ventas.length; i++) {
+								det.push({
+									id_articulo:this.ventas[i].id_articulo,
+									// nombre:this.ventas[i].nombre,
+									precio:this.ventas[i].costo,
+									cantidad:this.cantidades[i],
+									total:this.ventas[i].costo * this.cantidades[i]
+								})
+							}
+							var ven = {
+								folio:this.folio,
+								id_usuario:this.id_session,
+								total:this.tot,
+								detalles: det
+							}
+							console.log(ven);
+			
+							this.$http.post(urlventa,ven)
+							.then(function(json){
+								console.log(json.data);
+							}).catch(function(a){
+								Swal.fire({
+									position: 'center',
+									type: 'error',
+									title: 'Ha ocurrido un error',
+									text: 'verifique sus datos',
+								})
+								console.log(a.data);
+							});
+							window.location.reload();
+
+						}else{
 							Swal.fire({
 								position: 'center',
 								type: 'error',
 								title: 'Ha ocurrido un error',
-								text: 'verifique sus datos',
-							  })
-							console.log(a.data);
-						});
-						window.location.reload();	
-
+								text: 'No ha agregado articulos',
+							})
+						}
 					}
 				})
 			}
