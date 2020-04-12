@@ -1,10 +1,9 @@
 @extends('layouts.mastervend')
 @section('contenido')
-	<div class="d-none">
-		@{{id_usuario="{!!Session::get('id_usuario')!!}"}}
-	</div>
-
 <section id="ventas">
+								<div class="d-none">
+									@{{id_session="{!!Session::get('id_usuario')!!}"}}
+								</div>
 	<br>
 	<h1 class="container" align="center">Ventas</h1><hr>
 		<h3>Folio: @{{folio}}</h3>

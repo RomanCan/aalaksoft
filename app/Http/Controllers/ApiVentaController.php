@@ -19,7 +19,10 @@ class ApiVentaController extends Controller
     public function index()
     {
         //
-        return $venta = Venta::all();
+        // return $venta = Venta::all();
+        $id = Session::get('id_usuario');
+
+        return $venta=Venta::where('id_usuario','=',$id)->get();
     }
 
     /**

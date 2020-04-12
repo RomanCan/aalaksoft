@@ -11,7 +11,7 @@ function init(){
 		},	
 		el:'#ventas',
 		data:{
-			id_usuario:'',
+			id_session:'',
 			nombre: 'JEILO WORLD',
 			producto:[],
 			ventas:[],
@@ -104,7 +104,7 @@ function init(){
 						}
 						var ven = {
 							folio:this.folio,
-							id_usuario:4,
+							id_usuario:this.id_session,
 							total:this.tot,
 							detalles: det
 						}
@@ -114,6 +114,12 @@ function init(){
 						.then(function(json){
 							console.log(json.data);
 						}).catch(function(a){
+							Swal.fire({
+								position: 'center',
+								type: 'error',
+								title: 'Ha ocurrido un error',
+								text: 'verifique sus datos',
+							  })
 							console.log(a.data);
 						});
 						window.location.reload();	
