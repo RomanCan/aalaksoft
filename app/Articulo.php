@@ -15,7 +15,8 @@ class Articulo extends Model
     	'nombre',
     	'costo',
         'cantidad',
-        'id_tipo'
+        'id_tipo',
+        'activo'
     ]; 
 
     public function tipo(){

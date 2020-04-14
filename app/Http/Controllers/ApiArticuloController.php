@@ -68,6 +68,7 @@ class ApiArticuloController extends Controller
         $articulo->nombre=$request->get('nombre');
         $articulo->costo=$request->get('costo');
         $articulo->cantidad=$request->get('cantidad');
+        $articulo->activo=$request->get('activo');
         
         $articulo->update();
        

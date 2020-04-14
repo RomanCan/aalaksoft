@@ -21,6 +21,7 @@ new Vue({
 		id_tipo:'',
 		nombre:'',
 		costo:'',
+		activo:'',
 		editar:false
 	},
 	created:function(){
@@ -68,7 +69,7 @@ new Vue({
 				this.costo=response.data.costo
 				this.cantidad=response.data.cantidad
 				this.id_tipo=response.data.id_tipo
-
+				this.activo=response.data.activo
 				this.articuloid=response.data.id_articulo
 				$('#add_articulo').modal('show');
 			});
@@ -80,6 +81,7 @@ new Vue({
 					nombre:this.nombre,
 					costo:this.costo,
 					cantidad:this.cantidad,
+					activo:this.activo,
 					id_tipo:this.id_tipo
 				};
 				this.$http.patch(urlallart + '/' + this.articuloid,art)
@@ -152,7 +154,8 @@ new Vue({
 				cancelButtonText:'No, cancelar',
 			}).then((result) => {
 			  	if (result.value) {
-					this.$http.delete(urlallart +'/'+id).then(response=>{
+					this.$http.delete(urlallart +'/'+id)
+					.then(response=>{
 							Swal.fire(
 
 							'Ha sido eliminado exitosamente',
