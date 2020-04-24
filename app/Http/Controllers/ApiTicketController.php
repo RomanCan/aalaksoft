@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Codedge\Fpdf\Fpdf\Fpdf;
 use App\Empresa;
-use App\Articulo;
+
 
 class ApiTicketController extends Controller
 {
@@ -75,7 +75,7 @@ class ApiTicketController extends Controller
         // foreach ($empresas as $empresa) {
             // $file = public_path().'/img/logo_empresa/'.$empresa->logo;
             // return $file;
-            $pdf->Image($file,35,5.5,3);
+            // $pdf->Image($file,35,5.5,3);
             $pdf->SetFont('Arial','B',6);
             $pdf->SetTextColor(0,0,0);
             $textypos = 5;
@@ -108,7 +108,7 @@ class ApiTicketController extends Controller
             $pdf->Cell(50,$textypos,'___________________________________________',0,1);
             // $pdf->SetTextColor(255,255,255);
             $pdf->setX(4);
-            $pdf->SetFont('Arial','B',5);
+            $pdf->SetFont('Arial','B',4);
             $pdf->Cell(1,4,utf8_decode(''),0,0,'L');
             $pdf->Cell(5,4,utf8_decode('Cant.'),1,0,'C');
             $pdf->Cell(29,4,utf8_decode('Concepto'),1,0,'C');     
