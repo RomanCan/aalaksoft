@@ -91,7 +91,7 @@ function init(){
 					cancelButtonText:'No, cancelar',
 				}).then((result) => {
 					if (result.value) {
-						if(this.ventas.value){
+						if(this.ventas){
 							var det= [];
 							for (var i =0; i < this.ventas.length; i++) {
 								det.push({
