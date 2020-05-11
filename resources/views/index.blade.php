@@ -5,7 +5,6 @@
             <div class="text">
                 <h2>Productos y Servicios</h2>
                 <h4>La veterinaria cuenta con</h4>
-
             </div>
         	<div class="contenedor-gal">
         			<div class="contenedor-tarjeta">
@@ -138,6 +137,7 @@
                 </div>
             </div>
     </section>
+
     <section class="team container" style="background: #fafafa">
         <!-- inicio del row -->
         <div class="row">
@@ -150,20 +150,13 @@
                     </div>     
 
                     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                      <!-- Indicators -->
-                      <!-- <ol class="carousel-indicators">
-                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                        <li data-target="#carousel-example-generic" data-slide-to="3"></li>
-                      </ol> -->
 
                       <!-- Wrapper for slides -->
                       <div class="carousel-inner" role="listbox">
                         <div class="item active" align="center">
                           <img src="img/personal/erikamac.jpg" class="img-responsive img-rounded" alt="Responsive image">
                           <div class="carousel-caption " style="color: #ffffff; background: #2f4f4f">
-                            <h4>Érika Macías Dueña y directora</h4>
+                            <h4>Érika Macías Dueña y Directora</h4>
                             <!-- <p class=""> de la veterinaria</p> -->
                           </div>
                         </div>
