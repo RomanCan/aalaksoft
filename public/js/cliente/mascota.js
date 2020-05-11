@@ -223,15 +223,14 @@ new Vue({
 			this.$http.post(urlFoto,data,config)
 			.then(function(json){
 				console.log(json);
-				$('#datos').modal('hide');
+				
 				Swal.fire({
 					position: 'center',
 					type: 'success',
 					title: 'Guardado exitosamente',
 					showConfirmButton: false,
-					timer: 1500
+					timer: 2000
 				  })
-				this.getDatos();
 				
 				//Recarga la página window.location.reload();
 				window.location.reload();
