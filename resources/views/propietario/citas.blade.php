@@ -52,7 +52,7 @@
                             </select>
                             <label >Descripción</label>
                             <input class="form-control" type="text" placeholder="Razón de la cita" v-model="descripcion"><br>
-                            <input class="form-control" type="date" placeholder="Fecha de la cita" v-model="fecha_cita">
+                            <label>Fecha de la cita</label><input class="form-control" type="date" placeholder="Fecha de la cita" v-model="fecha_cita">
                             
                         </div>
                         <div class="modal-footer">

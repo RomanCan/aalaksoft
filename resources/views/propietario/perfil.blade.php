@@ -52,7 +52,7 @@
                   </div>
 
                   <div class="form-group">
-                      <label style="float:left">Nombre.</label>
+                      <label style="float:left">Nombres.</label>
                       <div class="input-group">
                           <div class="input-group-prepend">
                               <span class="input-group-text"><i class="fas fa-user"></i></span>

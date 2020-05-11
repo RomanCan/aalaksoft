@@ -41,7 +41,7 @@
 							<td><img v-bind:src="`img/mascotas/${mascotax.foto}` "class="image" height="100px" width="100px"></td>
 							<td>
 								<span class="btn btn-outline-success btn-block" @click="editarMascota(mascotax.id_mascota)"><i class="fa fa-edit"></i></span>
-								<span class="btn btn-outline-warning btn-block" @click="efoto(mascotax.id_mascota)"><i class="">Agregar/editar foto</i></span>
+								<span class="btn btn-outline-info btn-block" @click="efoto(mascotax.id_mascota)"><i class="">Agregar/editar foto</i></span>
 
 							</td>
 						</tr>
