@@ -17,14 +17,20 @@
 						<button type="button" class="btn btn-success" @click="getProducto()">Agregar</button>
 					</span>
 				</div><br>
-				<button class="btn btn-info btn-block" @click="vender()" >Vender</button>
+
+					<button v-if="ventas.length != 0" class="btn btn-info btn-block" @click="vender()">Vender</button>				
+
+				
 			</div>
 		</div><br>
 	</section>
 	<section >
-		<div class="row container" >
+		<div class="row container">
 			<div class="col-md-7 col-sm-8 col-xs-12  table-responsive-sm">
-				<table class="table table-borderless table-sm table-hover" style="margin:5px 10px">
+							<p class="text-center" v-if="ventas.length == 0">
+								No se han encontrado articulos o servicios <br> agrege el codigo del articulo o servicio
+							</p>
+				<table class="table table-borderless table-sm table-hover" v-if="ventas.length != 0" style="margin:5px 10px">
 					<thead class="thead-dark">
 						<th>Código</th>
 						<th>Nombre</th>
@@ -34,6 +40,7 @@
 						<th>Acción</th>
 					</thead>
 					<tbody>
+							
 						<tr v-for="(v,index) in ventas" align="center">
 							<td>@{{v.id_articulo}}</td>
 							<td>@{{v.nombre}}</td>
@@ -60,7 +67,7 @@
 			</div>
 			<div class="col-md-1 col-sm-1 col-xs-1"></div>
 			
-			<div class="col-md-4 col-sm-7 col-xs-6 table-responsive-sm" >				
+			<div class="col-md-4 col-sm-7 col-xs-6 table-responsive-sm" v-if="ventas.length != 0">				
 				<table class="table table-bordered" style="color: white">
 					<tr >
 						<th style="background: #000; width: 10%">Total</th>

@@ -69,4 +69,5 @@ Route::apiResource('apiCita','ApiCitaController');
 Route::apiResource('apiCitas','ApiCitasController');
 
 
-Route::get('ticket','ApiTicketController@ticket');
+// Route::get('ticket','ApiTicketController@ticket');
+Route::get('ticket','ApiVentaController@ticket');

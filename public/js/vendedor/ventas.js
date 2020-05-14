@@ -19,6 +19,7 @@ function init(){
 			pago:0,
 			tot:0,
 			folio:'',
+			
 			cantidades:[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
 			fecha: moment().format('YYYY-MM-DD')
 		},
@@ -29,7 +30,9 @@ function init(){
 			getProducto:function(){
 				this.$http.get(urlart + '/' + this.codigo)
 				.then(function(json){
+					
 					var venta = {
+						
 								'id_articulo':json.data.id_articulo,
 								'nombre':json.data.nombre,
 								'costo':json.data.costo,
@@ -39,11 +42,12 @@ function init(){
 					if(venta.id_articulo){
 						this.ventas.push(venta);
 					}else{
+						
 						Swal.fire({
 							position: 'center',
 							type: 'error',
 							title: 'Ha ocurrido un error',
-							text: 'Ingrese sólo el código',
+							text: 'Verifique si el codigo existe',
 						})
 					}
 					this.codigo = '';
@@ -123,7 +127,7 @@ function init(){
 								console.log(a.data);
 							});
 							window.location.reload();
-
+							// this.ventas ='';
 						}else{
 							Swal.fire({
 								position: 'center',
