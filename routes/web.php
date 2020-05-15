@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -10,29 +12,31 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-// Prueba
-// Route::view('prueba','prueba');
+
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 
 
 Route::get('/','DatosEmpresaController@index');
 //administrador
 // Route::view('perfiladmin','administrador.perfil');
-Route::view('perfil','administrador.perfil');
-Route::view('productos_servicios','administrador.articulos');
-Route::view('empleados','administrador.trabajadores');
-Route::view('empresa','administrador.empresa');
-Route::view('registro','administrador.registroventa');
+Route::view('perfil','administrador.perfil')->middleware('validar');
+Route::view('productos_servicios','administrador.articulos')->middleware('validar');
+Route::view('empleados','administrador.trabajadores')->middleware('validar');
+Route::view('empresa','administrador.empresa')->middleware('validar');
+Route::view('registro','administrador.registroventa')->middleware('validar');
 //vendedores
-Route::view('perfilvendedor','vendedores.perfil');
-Route::view('ventas','vendedores.ventas');
-Route::view('registros','vendedores.registros');
-Route::view('cita','vendedores.citas');
+Route::view('perfilvendedor','vendedores.perfil')->middleware('validar');
+Route::view('ventas','vendedores.ventas')->middleware('validar');
+Route::view('registros','vendedores.registros')->middleware('validar');
+Route::view('cita','vendedores.citas')->middleware('validar');
 //propietarios
-Route::view('perfilpropietario','propietario.perfil');
-Route::view('mimascota','propietario.perfilmascotas');
-Route::view('historial','propietario.historial');
-Route::view('citas','propietario.citas');
+Route::view('perfilpropietario','propietario.perfil')->middleware('validar');
+Route::view('mimascota','propietario.perfilmascotas')->middleware('validar');
+Route::view('historial','propietario.historial')->middleware('validar');
+Route::view('citas','propietario.citas')->middleware('validar');
 Route::view('login','login.login');
 //final de zona de vistas
 
@@ -61,7 +65,7 @@ Route::apiResource('logo','ApiLogoController');
 Route::apiResource('apiMascota','ApiMascotaController');
 Route::apiResource('apiPropietario','ApiPropietarioController');
 Route::apiResource('apiFotoMascota','ApiFotoMascotaController');
-Route::apiResource('apiUsuario','ApiUsersController');
+Route::apiResource('apiUsuario','ApiUsersController')->middleware('validar');
 Route::apiResource('apiCliente','ApiClienteController');
 Route::apiResource('apiPropietario','ApiPropietarioController');
 Route::apiResource('apiGenero','ApiGeneroController');

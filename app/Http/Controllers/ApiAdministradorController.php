@@ -25,7 +25,8 @@ class ApiAdministradorController extends Controller
     	if(count($resp)>0)
     	{
             $us=$resp[0]->nombre.' '.$resp[0]->apellidop.' '.$resp[0]->apellidom;
-    		Session::put('usuario',$us);
+            // Session::put('U',$resp);
+            Session::put('usuario',$us);
     		Session::put('rol',$resp[0]->rol->rol);
             // Session::put('foto',$resp[0]->foto);
             Session::put('id_usuario',$resp[0]->id_usuario);
@@ -46,6 +47,7 @@ class ApiAdministradorController extends Controller
             if(count($prop)>0)
             {
                 $use=$prop[0]->nombre.' '.$prop[0]->apellidop;
+                // Session::put('Us',$prop);
                 Session::put('usuario',$use);
                 Session::put('rol',$prop[0]->rol->rol);
                 // Session::put('foto',$prop[0]->foto);

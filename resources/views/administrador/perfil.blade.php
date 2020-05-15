@@ -2,10 +2,11 @@
 @section('contenido')
 
 <!-- <div>
-  @{{id_session="{!!Session::get('id_usuario')!!}"}}
+  
 </div> -->
 
 <section id="usuario">
+    {{-- @{{id_session="{!!Session::get('id_usuario')!!}"}} --}}
     <div class="container" align="center">
         <hr>
         <h2>Mi perfil</h2><br>
